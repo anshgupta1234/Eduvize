@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Eduvize.iml" filepath="$PROJECT_DIR$/.idea/Eduvize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" filepath="$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../NoteSetsApp/.idea/NoteSetsApp.iml" filepath="$PROJECT_DIR$/../NoteSetsApp/.idea/NoteSetsApp.iml" />
     </modules>
   </component>
 </project>
