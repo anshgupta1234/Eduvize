@@ -1,0 +1,11 @@
+/backend/env
+*.egg
+*.egg-info/
+.idea/
+.vscode
+*.pyc
+*.pyo
+build/
+.DS_Store
+.cache/
+.pytest_cache/
