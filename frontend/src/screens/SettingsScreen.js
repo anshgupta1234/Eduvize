@@ -20,9 +20,9 @@ export default class SettingsScreen extends Component {
       <View style={styles.container}>
         <StatusBar hidden />
         <Image style={{ width: 150, height: 150, borderRadius: 100, margin: 20 }} source={require('../../assets/profile-pic.jpeg')} />
-        <Text fontSize={24} style={{ fontWeight: "bold", fontSize: 20, color: 'white' }}>Ansh Gupta</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 20, color: 'white' }}>Ansh Gupta</Text>
         <View style={{ flexDirection: 'row', marginTop: 10 }}>
-          <Image style={{ width: 30, height: 30 }} source={require('../../assets/icon.png')} />
+          <Image style={{ width: 35, height: 35 }} source={require('../../assets/icon.png')} />
           <Text style={{ fontSize: 17, color: 'white' }}>  4568</Text>
         </View>
         <ScrollView style={styles.settingsContainer}>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   accountType: {
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 10,
     borderColor: '#000',
     height: 75,
     justifyContent: 'center',
@@ -98,11 +98,11 @@ const styles = StyleSheet.create({
     paddingLeft: 10
   },
   settingsBaseContainer: {
-    borderRadius: 5,
+    borderRadius: 10,
     borderWidth: 1
   },
   text: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'white'
   }
 });
