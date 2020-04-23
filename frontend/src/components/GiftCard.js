@@ -10,7 +10,6 @@ function GiftCard({ color, logo, textColor, price }) {
         <Text style={{ color: textColor, fontSize: 18 }}>  {price}</Text>
       </View>
       <Text style={{ color: textColor, marginTop: 40, fontSize: 20 }}>X-X-X-X  X-X-X-X  X-X-X-X</Text>
-      <Image source={require('../../assets/ribbon.png')} style={{ width: 110, height: 110, position: 'absolute', top: -25, left: Dimensions.get('window').width - 130}} />
     </View>
   )
 }
