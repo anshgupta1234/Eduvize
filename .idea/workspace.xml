@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11d9d7ab-686f-404a-96d0-52e1580ffe48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/SubmitButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/workspace.xml" afterDir="false" />
@@ -44,13 +44,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="-1203">
+              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/screens/LoginScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="370" column="33" selection-start-line="370" selection-start-column="33" selection-end-line="370" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,15 +117,28 @@
       <find>div&gt;</find>
       <find>div</find>
       <find>native-base</find>
+      <find>AppTextInput</find>
+      <find>SubmitB</find>
+      <find>TextInput</find>
+      <find>noteset=</find>
+      <find>quicksand</find>
+      <find>fontF</find>
+      <find>style={[styles.input, {marginBottom: 30}]}</find>
+      <find>containerStyle={[styles.input, {marginBottom: 30}]}</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
       <replace>styles={styles.text}</replace>
       <replace>style={styles.text}</replace>
+      <replace>TextInput</replace>
+      <replace>Input</replace>
+      <replace>containerStyle={[styles.input, {marginBottom: 30}]}</replace>
+      <replace>containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderWidth: 0 }}</replace>
+      <replace>containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>C:\Users\anshg\PycharmProjects\Eduvize\frontend</dir>
       <dir>C:\Users\anshg\PycharmProjects\Eduvize\backend</dir>
+      <dir>C:\Users\anshg\PycharmProjects\Eduvize\frontend</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -112,7 +149,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/frontend/screens/SettingsScreen.js" />
-        <option value="$PROJECT_DIR$/frontend/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Interest.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/GiftCard.js" />
         <option value="$PROJECT_DIR$/frontend/src/screens/StoreScreen.js" />
@@ -122,6 +158,9 @@
         <option value="$PROJECT_DIR$/../NoteSetsApp/yarn.lock" />
         <option value="$PROJECT_DIR$/backend/dev_server.sh" />
         <option value="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/SubmitButton.js" />
+        <option value="$PROJECT_DIR$/frontend/App.js" />
+        <option value="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" />
       </list>
     </option>
   </component>
@@ -148,6 +187,11 @@
             <path>
               <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
@@ -187,7 +231,13 @@
               <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
               <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,7 +250,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/components" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -213,9 +263,10 @@
       <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend\src\components" />
+      <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend\src\screens" />
       <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend\assets" />
       <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend" />
-      <recent name="C:\Users\anshg\PycharmProjects\Eduvize\frontend\src\screens" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -242,12 +293,12 @@
       <updated>1587524263864</updated>
       <workItem from="1587524266045" duration="779000" />
       <workItem from="1587525150863" duration="1369000" />
-      <workItem from="1587526651894" duration="44806000" />
+      <workItem from="1587526651894" duration="48462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46954000" />
+    <option name="totallyTimeSpent" value="50610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2250" height="917" extended-state="6" />
@@ -266,7 +317,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49863014" visible="true" weight="0.39736843" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49863014" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50136983" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49954337" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -443,16 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/assets/advik.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -539,15 +580,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../NoteSetsApp/src/components/SubmitButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/SubmitButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NoteSetsApp/src/utils/AppTextInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/assets/apple.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="-1203">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/screens/LoginScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="370" column="33" selection-start-line="370" selection-start-column="33" selection-end-line="370" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
