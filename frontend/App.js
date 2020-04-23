@@ -6,6 +6,7 @@ import SettingsScreen from "./src/screens/SettingsScreen";
 import { Icon } from "react-native-elements";
 import HomeScreen from "./src/screens/HomeScreen";
 import StoreScreen from "./src/screens/StoreScreen";
+import ExploreScreen from "./src/screens/ExploreScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,6 +21,9 @@ function App() {
             if (route.name === 'Dashboard') {
               iconName = 'ios-home';
               return <Icon name={iconName} size={size} color={color} type='ionicon'/>;
+            } else if (route.name === 'Explore!') {
+              iconName = 'school';
+              return <Icon name={iconName} size={size} color={color} type='material'/>;
             } else if (route.name === 'Store') {
               iconName = 'ios-settings';
               return <Image source={require('./assets/icon.png')} style={{ width: size, height: size }}/>
@@ -40,6 +44,7 @@ function App() {
         }}
       >
         <Tab.Screen name="Dashboard" component={HomeScreen} />
+        <Tab.Screen name="Explore!" component={ExploreScreen} />
         <Tab.Screen name="Store" component={StoreScreen} />
         <Tab.Screen name="Profile" component={SettingsScreen} />
       </Tab.Navigator>

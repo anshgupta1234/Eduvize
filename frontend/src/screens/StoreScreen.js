@@ -27,7 +27,7 @@ export default class StoreScreen extends Component {
         </Header>
         <ScrollView contentContainerStyle={styles.store}>
           <Icon name="card-giftcard" type="material" color="white" size={70} containerStyle={{ backgroundColor: 'green', padding: 20, borderRadius: 55, marginBottom: 10 }}/>
-          <Text style={{ fontWeight: "bold", fontSize: 17, color: 'white', letterSpacing: 1.5, textAlign: 'center' }}>Buy giftcards with your tokens!</Text>
+          <Text style={{ fontWeight: "bold", fontSize: 17, color: 'white', letterSpacing: 1.1, textAlign: 'center' }}>Buy giftcards with your tokens!</Text>
           <View style={{ flexDirection: 'row', marginTop: 5, alignItems: 'center'}}>
             <Text style={{ color: 'lightgreen', fontSize: 18, textAlign: 'left' }}>Amount: </Text>
             <ButtonGroup

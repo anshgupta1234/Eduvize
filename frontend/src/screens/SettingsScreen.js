@@ -41,12 +41,11 @@ export default class SettingsScreen extends Component {
           </View>
           <View style={styles.settingsBaseContainer}>
             <TouchableHighlight
-              onPress={() => this.props.navigation.navigate('Options')}
               style={[styles.settingsBase, { borderTopLeftRadius: 5, borderTopRightRadius: 5 }]}
             >
               <Text style={styles.text}>Options</Text>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.settingsBase} onPress={() => this.props.navigation.navigate('Account')}>
+            <TouchableHighlight style={styles.settingsBase}>
               <Text style={styles.text}>My Account</Text>
             </TouchableHighlight>
             <TouchableHighlight style={styles.settingsBase}>
