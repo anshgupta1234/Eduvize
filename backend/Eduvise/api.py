@@ -5,13 +5,13 @@ from flask import (
 )
 from flask_cors import CORS
 import requests
-from connected_apis import khanUpdate, duolingoUpdate
+from connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)
 
 @bp.route('/ka')
 def oauth_authorize():
-    # accept some sort of userId from eduvise
+    # uid = request.args.get('userId')
     oauth = KhanAcademySignIn()
     request_token, request_token_secret, url = oauth.authorize()
     # add request tokens to db for specific user
@@ -27,13 +27,17 @@ def oauth_callback():
 
 @bp.route("/update")
 def update():
-    # get eduvise userId thing and query the needed api tokens for stuff
+    # uid = request.args.get('userId')
+    # TODO: only make function calls to update APIs if the data needed for the API exists in their account
+    # TODO: return not only points but a list of all APIs used in their account
     access_token = "t6564182086795264" # this is my personal temp token
     access_token_secret = "shyNWuxVazvXZMWP" # this is my personal temp secret token plz no steal
     username = 'EricAndrechek' # my personal duolingo username but pull from db in actual usage
+    ntid = "39345240" # grab this from db
     nickname, points = khanUpdate(access_token, access_token_secret)
     dpoints = duolingoUpdate(username)
-    eduvise_points = dpoints + points
+    ntpoints = nitroUpdate(ntid)
+    eduvise_points = dpoints + points + (ntpoints * 100)
     return str(eduvise_points)
 
 @bp.route("/duolingo", methods=("POST", "GET"))
@@ -41,5 +45,16 @@ def duolingo():
     if request.method == 'GET':
         return redirect("https://www.duolingo.com/o/zxvxbm")
     elif request.method == 'POST':
-        # get eduvise userId and the duolingo username then redirect them to join the class
+        # username = request.get_json()["username"]
+        # uid = request.get_json()["userId"]
         return "ok send to this url as a get request in browser now"
+
+@bp.route("/nt", methods=("POST", "GET"))
+def nitrotype():
+    q = request.args.get('q')
+    if request.method == "GET":
+        return nitroSearch(q)
+    elif request.method == "POST":
+        # uid = request.get_json()["userId"]
+        ntid = request.get_json()["accountId"]
+        return "Account now linked!"
