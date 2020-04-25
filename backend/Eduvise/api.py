@@ -9,12 +9,14 @@ from .connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch
 
 from .pymongo_db import DataBase
 
+from flask_login import current_user
+
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)
 
 @bp.route('/ka')
 def oauth_authorize():
-    uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie
+    uid = current_user.id # this is a placeholder, that will be a cookie
     oauth = KhanAcademySignIn()
     request_token, request_token_secret, url = oauth.authorize()
     # add request tokens to db for specific user if cookies dont work for callback properly
@@ -23,7 +25,7 @@ def oauth_authorize():
 
 @bp.route("/oauth_callback")
 def oauth_callback():
-    uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie. 
+    uid = current_user.id # this is a placeholder, that will be a cookie. 
     # if this doesnt work on callback we will nee line 21 uncommented and to add function here to search
     # for user with matching kart and karts
     oauth = KhanAcademySignIn()
@@ -35,7 +37,7 @@ def oauth_callback():
 
 @bp.route("/update")
 def update():
-    uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie
+    uid = current_user.id # this is a placeholder, that will be a cookie
     # TODO: only make function calls to update APIs if the data needed for the API exists in their account
     # TODO: return not only points but a list of all APIs used in their account
 
@@ -83,7 +85,7 @@ def duolingo():
         return redirect("https://www.duolingo.com/o/zxvxbm")
     elif request.method == 'POST':
         username = request.get_json()["username"]
-        uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie
+        uid = current_user.id # this is a placeholder, that will be a cookie
         DataBase(uid).updateOne("dun", username)
         return "ok send to this url as a get request in browser now"
 
@@ -93,14 +95,14 @@ def nitrotype():
         q = request.args.get('q')
         return nitroSearch(q)
     elif request.method == "POST":
-        uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie
+        uid = current_user.id # this is a placeholder, that will be a cookie
         ntid = request.get_json()["accountId"]
         DataBase(uid).updateOne("ntid", ntid)
         return "Account now linked!"
 
 @bp.route("/ca")
 def codeacademy():
-    uid = "5ea3b36fed7dfcc5542195ec" # this is a placeholder, that will be a cookie
+    uid = current_user.id # this is a placeholder, that will be a cookie
     username = request.args.get('username')
     if caLink(username) == 404:
         return "Username not found. Try another one."
