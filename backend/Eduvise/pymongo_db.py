@@ -8,7 +8,7 @@ class DataBase:
             lines = f.readlines()
             secret_key = lines[0].strip()
             mongo_pw = lines[1].strip()
-        self.db = MongoClient("mongodb+srv://admin:{}@eduvise-f0zco.gcp.mongodb.net/test?retryWrites=true&w=majority".format(mongo_pw)).Eduvise.users
+        self.db = MongoClient("mongodb+srv://admin:{}@eduvise-f0zco.gcp.mongodb.net/test?retryWrites=true&w=majority".format(mongo_pw)).Eduvise.user
         if self.db.find_one({'_id': ObjectId(userId)}) != None:
             self.id = {'_id': ObjectId(userId)}
     
