@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11d9d7ab-686f-404a-96d0-52e1580ffe48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/SubmitButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils/exports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/HealthyRef.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HealthyRef/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HealthyRef/.idea/workspace.xml" afterDir="false" />
@@ -44,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1203">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="92">
+              <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -56,23 +58,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/screens/LoginScreen.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/Eduvise/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="370" column="33" selection-start-line="370" selection-start-column="33" selection-end-line="370" selection-end-column="33" />
+            <state relative-caret-position="323">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-38" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="690">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -88,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../NoteSetsApp/yarn.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="96186">
               <caret line="4182" column="17" selection-start-line="4182" selection-start-column="17" selection-end-line="4182" selection-end-column="17" />
             </state>
           </provider>
@@ -125,6 +134,9 @@
       <find>fontF</find>
       <find>style={[styles.input, {marginBottom: 30}]}</find>
       <find>containerStyle={[styles.input, {marginBottom: 30}]}</find>
+      <find>'htt</find>
+      <find>'http://192.168.10.104:5000</find>
+      <find>{$ip}</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
@@ -135,6 +147,7 @@
       <replace>containerStyle={[styles.input, {marginBottom: 30}]}</replace>
       <replace>containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderWidth: 0 }}</replace>
       <replace>containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}</replace>
+      <replace>${ip}</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\anshg\PycharmProjects\Eduvize\backend</dir>
@@ -157,10 +170,13 @@
         <option value="$PROJECT_DIR$/../NoteSetsApp/src/screens/LoginScreen.js" />
         <option value="$PROJECT_DIR$/../NoteSetsApp/yarn.lock" />
         <option value="$PROJECT_DIR$/backend/dev_server.sh" />
-        <option value="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/SubmitButton.js" />
-        <option value="$PROJECT_DIR$/frontend/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" />
+        <option value="$PROJECT_DIR$/frontend/App.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/src/utils/exports.js" />
+        <option value="$PROJECT_DIR$/frontend/src/screens/HomeScreen.js" />
       </list>
     </option>
   </component>
@@ -171,8 +187,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-19" />
-    <option name="width" value="1610" />
+    <option name="x" value="-20" />
+    <option name="width" value="1612" />
     <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -191,53 +207,7 @@
             <path>
               <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eduvize" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eduvize" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NoteSetsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -250,7 +220,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/Eduvise" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -293,20 +263,21 @@
       <updated>1587524263864</updated>
       <workItem from="1587524266045" duration="779000" />
       <workItem from="1587525150863" duration="1369000" />
-      <workItem from="1587526651894" duration="48462000" />
+      <workItem from="1587526651894" duration="55269000" />
+      <workItem from="1587706969808" duration="3918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50610000" />
+    <option name="totallyTimeSpent" value="61373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2250" height="917" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24977168" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17899543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -317,9 +288,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49863014" visible="true" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49863014" visible="true" weight="0.33421052" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50136983" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49954337" weight="0.32894737" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -355,18 +327,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js</url>
-          <line>5</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../HealthyRef/src/utils/global.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -394,13 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -415,16 +368,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/screens/SettingsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="58" column="34" lean-forward="true" selection-end-line="102" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/screens/SettingsScreen.js" />
     <entry file="file://$PROJECT_DIR$/../NoteSetsApp/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -432,12 +376,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/Jodriann-teen.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/Jodriann-teen.jpg" />
+    <entry file="file://$PROJECT_DIR$/backend/main.py" />
     <entry file="file://$PROJECT_DIR$/backend/Eduvise/templates/base.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -484,19 +424,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/screens/StoreScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/advik.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/advik.png" />
     <entry file="file://$PROJECT_DIR$/backend/khan_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -507,28 +435,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../NoteSetsApp/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="4182" column="17" selection-start-line="4182" selection-start-column="17" selection-end-line="4182" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/Eduvise/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/screens/ExploreScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -549,16 +460,6 @@
           <caret line="307" column="30" selection-start-line="307" selection-start-column="30" selection-end-line="307" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Eduvise/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -608,35 +509,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/apple.png">
+    <entry file="file://$PROJECT_DIR$/frontend/assets/nitro.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/screens/StoreScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1203">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="564">
+          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/App.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/screens/ExploreScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="529">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/screens/LoginScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="370" column="33" selection-start-line="370" selection-start-column="33" selection-end-line="370" selection-end-column="33" />
+        <state relative-caret-position="7889">
+          <caret line="349" column="6" selection-start-line="349" selection-start-column="6" selection-end-line="349" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/apple.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NoteSetsApp/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96186">
+          <caret line="4182" column="17" selection-start-line="4182" selection-start-column="17" selection-end-line="4182" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/code.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/utils/exports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/Eduvise/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

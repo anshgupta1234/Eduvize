@@ -95,7 +95,8 @@ state = {
   }
 
   login(username, password){
-    fetch("https://ns.21xayah.com/auth/login", {
+    this.props.navigation.navigate('App')
+    /*fetch("https://ns.21xayah.com/auth/login", {
       method: 'POST',
       body: JSON.stringify({
         name: username,
@@ -113,7 +114,7 @@ state = {
         else if(response.data.message === 'not_found'){
           if(password === '') this.setState({ passwordErrorMessage: 'Email or Password is incorrect' });
         }
-      })
+      })*/
   }
 
   fieldsEmpty(){
@@ -149,7 +150,8 @@ state = {
         validated = true
       }
 
-      if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
+      //if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
+      if (validated) this.props.navigation.navigate("App");
       else this.setState({ passwordErrorMessage: 'Email or Password is wrong' })
   };
 
@@ -345,7 +347,8 @@ class SignupTab extends Component {
         validated = true
       }
 
-      if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
+      //if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
+      if (validated) this.props.navigation.navigate("App");
       else this.setState({ passwordErrorMessage: 'Email or Password is wrong' })
   };
 
