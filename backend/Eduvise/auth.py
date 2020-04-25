@@ -6,6 +6,7 @@ from flask import (
 )
 from .models import User
 from flask_mongoengine import DoesNotExist
+flask_cors import CORS
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 CORS(bp)
@@ -28,7 +29,7 @@ def login():
     request_json = request.get_json()
     try:   
         existing_user = User.get(email=request_json['email'])
-        if check_password_hash(request_json['password']):
+        if existing_user.check_password_hash(request_json['password']):
             login_user(existing_user)
             return 'user logged in'
         else:
