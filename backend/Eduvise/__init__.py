@@ -1,15 +1,17 @@
 import os
 
 from flask import Flask, render_template, send_from_directory
+from flask_login import LoginManager
 from flask_mongoengine import MongoEngine
 db = MongoEngine()
-
+login_manager = LoginManager()
 from . import api, auth, models, webviews
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     db.init_app(app)
+    login_manager.init_app(app)
     with open("Eduvise/secrets.txt") as f:
         lines = f.readlines()
         secret_key = lines[0].strip()
