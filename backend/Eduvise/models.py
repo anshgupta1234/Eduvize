@@ -5,7 +5,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 class User(UserMixin, db.Document):
     email = db.StringField(max_length=50, unique=True)
     password = db.StringField()
-    points = db.IntField(default=0)
     display_name = db.StringField()
     nitrotype_id = db.StringField()
     khan_token = db.StringField()

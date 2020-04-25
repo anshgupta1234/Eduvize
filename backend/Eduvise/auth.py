@@ -1,5 +1,5 @@
 from . import db, login_manager
-from flask_login import login_user, login_required, current_user
+from flask_login import login_user, logout_user, login_required, current_user
 import json
 from flask import (
     Blueprint, abort, render_template, request, url_for, redirect
@@ -43,6 +43,13 @@ def login():
             return 'bad password'
     except DoesNotExist:
         return 'user does not exist'  
+
+@bp.route("/logout", methods=["GET", "POST"])
+@login_required
+def logout():
+    logout_user()
+    return 'successfully logged out'
+    
 
 @bp.route('/web_profile/')
 @login_required

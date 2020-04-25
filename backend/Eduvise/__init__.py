@@ -18,7 +18,7 @@ def create_app(test_config=None):
     app.json_encoder = CustomJSONEncoder
     login_manager.init_app(app)
     with open("Eduvise/secrets.txt") as f:
-        lines = f.readlines()
+        lines = f.readlines()   
         secret_key = lines[0].strip()
         mongo_pw = lines[1].strip()
     app.config.from_mapping(
