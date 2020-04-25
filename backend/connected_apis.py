@@ -1,6 +1,8 @@
 from khan_api import KhanAcademySignIn, KhanAPI
 import requests
 import json
+from bs4 import BeautifulSoup
+import lxml
 
 def khanUpdate(access_token, access_token_secret):
     kapi = KhanAPI(access_token, access_token_secret, "/api/internal/user")
@@ -81,3 +83,26 @@ def nitroUpdate(id):
         return response.json()["data"]["avgSpeed"]
     except:
         return 0
+
+def caUpdate(username):
+    url = "https://www.codecademy.com/profiles/{}".format(username)
+
+    payload = {}
+    headers = {'authority': 'www.codecademy.com','pragma': 'no-cache','cache-control': 'no-cache','Cookie': '_session_id=cb046960b7ebe52b30b7f04950877c46; __cfduid=dc7baf2430d7451b3b3004c4501c622d91587691297; initial_referrer=%24direct; initial_referring_domain=%24direct; zendesk_identify=true'}
+
+    response = requests.request("GET", url, headers=headers, data = payload)
+
+    soup = BeautifulSoup(response.text, 'lxml')
+    for p in soup.find_all('p'):
+        if "total-points" in str(p):
+            return int(p.string)
+    return 0
+
+def caLink(username):
+    url = "https://www.codecademy.com/profiles/{}".format(username)
+
+    payload = {}
+    headers = {'authority': 'www.codecademy.com','pragma': 'no-cache','cache-control': 'no-cache','Cookie': '_session_id=cb046960b7ebe52b30b7f04950877c46; __cfduid=dc7baf2430d7451b3b3004c4501c622d91587691297; initial_referrer=%24direct; initial_referring_domain=%24direct; zendesk_identify=true'}
+
+    response = requests.request("GET", url, headers=headers, data = payload)
+    return response.status_code
