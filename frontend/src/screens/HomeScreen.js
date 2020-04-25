@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
-import {View, Text, Image, StyleSheet, ScrollView, TouchableHighlight, Linking, Button, TextInput} from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+  TouchableHighlight,
+  Linking,
+  Button,
+  TextInput,
+  StatusBar,
+} from "react-native";
 import {Body, Left, Right} from "native-base";
 import { Header } from 'native-base'
 import {LinearGradient} from "expo-linear-gradient";
@@ -11,7 +22,12 @@ import { ip } from "../utils/exports";
 export default class HomeScreen extends Component {
 
   componentDidMount(){
-
+    fetch(`http://${ip}:5000/api/update`, {
+      method: 'GET',
+    }).then(res => res.json())
+      .then(res => {
+        this.setState({ khan: res["Khan Academy"], duo: res["Duolingo"], nitro: res["Nitrotype"], code: res["Codeacademy"], points: res["Total Points"] })
+      })
   }
 
   state = {
@@ -84,8 +100,9 @@ export default class HomeScreen extends Component {
   render(){
     return (
       <View style={styles.container}>
+        <StatusBar hidden={false} />
         <Header style={styles.header}>
-          <Body>
+          <Body style={{ alignItems: 'flex-start', paddingLeft: 5 }}>
             <Text style={{ fontSize: 20, color: 'white' }}>Dashboard</Text>
           </Body>
           <Right>
@@ -120,30 +137,52 @@ export default class HomeScreen extends Component {
             </View>
           </View>
         </Modal>
-        <ScrollView contentContainerStyle={{ alignItems: 'center', padding: 30, justifyContent: 'center' }}>
-          <LinearGradient colors={['#9C56FF', '#b168e0']} style={{ margin: 10, width: '100%', borderRadius: 5, alignSelf: 'flex-end' }}>
-            <View style={{ padding: 15 }}>
-               <Text style={{ fontSize: 16, color: 'white', textAlign: 'center', marginHorizontal: 20 }}>Connect to these services to earn more points!</Text>
-                <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 5, width: '100%', flex: 1, flexWrap: 'wrap' }}>
-                  <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={this.connectKhan}>
-                    <Image source={require('../../assets/khan.png')} style={{ height: 80, width: 80,  }}/>
-                  </TouchableHighlight>
-                  <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ duoVisible: true })}>
-                    <Image source={require('../../assets/duo.png')} style={{ height: 60, width: 60,  }}/>
-                  </TouchableHighlight>
-                  <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={this.getHealthData}>
-                    <Image source={require('../../assets/fitbit.png')} style={{ height: 60, width: 60,  }}/>
-                  </TouchableHighlight>
-                  <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ nitroVisible: true })}>
-                    <Image source={require('../../assets/nitro.png')} style={{ height: 60, width: 60,  }}/>
-                  </TouchableHighlight>
-                  <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ codeVisible: true })}>
-                    <Image source={require('../../assets/code.png')} style={{ height: 60, width: 60,  }}/>
-                  </TouchableHighlight>
-                </View>
-            </View>
-          </LinearGradient>
-        </ScrollView>
+        <View style={{ paddingLeft: 15 }}>
+          <ScrollView contentContainerStyle={{ alignItems: 'center', padding: 30, justifyContent: 'center' }}>
+            <LinearGradient colors={['#9C56FF', '#b168e0']} style={{ margin: 10, width: '100%', borderRadius: 5, alignSelf: 'flex-end' }}>
+              <View style={{ padding: 15 }}>
+                 <Text style={{ fontSize: 16, color: 'white', textAlign: 'center', marginHorizontal: 20 }}>Connect to these services to earn more points!</Text>
+                  <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 5, width: '100%', flex: 1, flexWrap: 'wrap' }}>
+                    {
+                      this.state.khan ? null : (
+                        <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={this.connectKhan}>
+                          <Image source={require('../../assets/khan.png')} style={{ height: 80, width: 80,  }}/>
+                        </TouchableHighlight>
+                      )
+                    }
+                    {
+                      this.state.duo ? null : (
+                         <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ duoVisible: true })}>
+                          <Image source={require('../../assets/duo.png')} style={{ height: 60, width: 60,  }}/>
+                        </TouchableHighlight>
+                      )
+                    }
+                    {
+                      this.state.fitbit ? null : (
+                        <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={this.getHealthData}>
+                          <Image source={require('../../assets/fitbit.png')} style={{ height: 60, width: 60,  }}/>
+                        </TouchableHighlight>
+                      )
+                    }
+                    {
+                      this.state.nitro ? null : (
+                        <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ nitroVisible: true })}>
+                          <Image source={require('../../assets/nitro.png')} style={{ height: 60, width: 60,  }}/>
+                        </TouchableHighlight>
+                      )
+                    }
+                    {
+                      this.state.code ? null : (
+                        <TouchableHighlight style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 15, width: '20%', height: 80 }} onPress={() => this.setState({ codeVisible: true })}>
+                          <Image source={require('../../assets/code.png')} style={{ height: 60, width: 60,  }}/>
+                        </TouchableHighlight>
+                      )
+                    }
+                  </View>
+              </View>
+            </LinearGradient>
+          </ScrollView>
+        </View>
       </View>
     );
   }
@@ -157,6 +196,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#373737',
-    width: '100%'
+    width: '100%',
+    borderBottomWidth: 0
   }
 });

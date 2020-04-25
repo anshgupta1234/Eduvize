@@ -41,7 +41,10 @@ function Main(){
         activeTintColor: '#9C56FF',
         inactiveTintColor: 'gray',
         activeBackgroundColor: '#373737',
-        inactiveBackgroundColor: '#373737'
+        inactiveBackgroundColor: '#373737',
+        style: {
+          borderTopWidth: 0
+        }
       }}
     >
       <Tab.Screen name="Dashboard" component={HomeScreen} />
@@ -58,8 +61,8 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="App" component={Main} />
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="App" component={Main} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -14,8 +14,8 @@ export default class StoreScreen extends Component {
   render(){
     return (
       <View style={styles.container}>
-        <Header style={styles.header}>
-          <Body>
+        <Header style={styles.header} noLeft={true}>
+          <Body style={{ alignItems: 'flex-start', paddingLeft: 5 }}>
             <Text style={{ fontSize: 20, color: 'white' }}>Store</Text>
           </Body>
           <Right>
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'black'
   },
   header: {
-    backgroundColor: '#373737'
+    backgroundColor: '#373737',
+    borderBottomWidth: 0,
   },
   store: {
     alignItems: 'center',

@@ -7,17 +7,14 @@ import { Input } from "react-native-elements";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ip } from "../utils/exports";
 
-const baseUrl = "https://10.0.2.2:3001";
-
 
 const width = Dimensions.get('window').width;
 
 class LoginTab extends Component {
 
 state = {
-      username: '',
-      email: '',
-      password: '',
+      email: 'chunky@gmail.com',
+      password: 'halloguys',
       emailErrorMessage: '',
       passwordErrorMessage: '',
   };
@@ -48,26 +45,26 @@ state = {
     }
   };
 
-  login(username, password){
-    fetch(`http://${ip}:5000/login/`, {
+  login(){
+    fetch(`http://${ip}:5000/auth/login/`, {
       method: 'POST',
       body: JSON.stringify({
-        name: username,
-        password: password
+        email: this.state.email,
+        password: this.state.email
       }),
       headers: {
-        'Content-Type': 'application/json',
+        'Content-type': 'application/json',
+        "cookie": "session=.eJwlzjsOwjAMANC7ZGZwnNiJe5kq_gnWlk6Iu1OJE7z3KXsecT7L9j6ueJT95WUrLBxBNMQsxCQakDedSzq5Ahsu81UJ0CIrQLPsjqJSly0VQk9SGQ5NiNvQ0DYYaoXZUX3OXEIkki0G5WS7LVjEDjqyV51Y7sh1xvHfUKyutU2b3ZArdsBMTizfH45YNdg.XqS5aw.r_Q_09NgKpTXvIAO6ODIcmDQH2U",
       }
-    }).then(response => response.json())
-      .then(response => {
-        if(response.success === true){
-          this.storeToken(response.data.token);
-          this.props.navigation.navigate('App');
-        }
-        else if(response.data.message === 'not_found'){
-          if(password === '') this.setState({ passwordErrorMessage: 'Email or Password is incorrect' });
-        }
-      })
+    }).then(res => res.text()).then(async(res) => {
+      if(res.success){
+        const response = await AsyncStorage.setItem('cookie', res.headers["Set-Cookie"]);
+        this.props.navigation.navigate('App')
+      } else {
+        console.log(res);
+        this.setState({ passwordErrorMessage: "Wrong password / email!" })
+      }
+    });
   }
 
   fieldsEmpty(){
@@ -83,10 +80,9 @@ state = {
       let validated = false;
       let errorMessage = '';
       if(!this.fieldsEmpty()) {
-        validated = true
+        this.login()
       }
 
-      if (validated) this.props.navigation.navigate("App");
       else this.setState({ passwordErrorMessage: 'Email or Password is wrong' })
   };
 
@@ -105,10 +101,10 @@ state = {
         <Text style={{ fontSize: 20, marginBottom: 20 }}>Eduvize</Text>
         <Input
             leftIcon={{ type: 'material', name: 'mail', color: '#999', marginRight: 10 }}
-            onChangeText={(text) => this.onChangeText('username', text)}
+            onChangeText={(text) => this.onChangeText('email', text)}
             placeholder="Email"
             secureTextEntry={false}
-            value={this.state.username}
+            value={this.state.email}
             containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}
             showBottomBorder={false}
             errorMessage={this.state.usernameErrorMessage}

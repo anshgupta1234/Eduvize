@@ -43,21 +43,21 @@ export default class ExploreScreen extends Component {
           <View style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap' }}>
             <View style={styles.interest}>
               <Image source={require('../../assets/coding.jpg')} style={{ height: 190, maxWidth: '100%' }} />
-              <View style={{ padding: 10 }}>
+              <View style={{ padding: 5 }}>
                 <Text style={{ fontSize: 17, textAlign: 'center' }}>Web Development</Text>
                 <Text style={{ textAlignVertical: 'bottom', color: '#666', fontSize: 12, fontStyle: 'italic', marginTop: 20 }}>Based on your interest in: Art, Mathematics</Text>
               </View>
             </View>
             <View style={styles.interest}>
               <Image source={require('../../assets/coding.jpg')} style={{ height: 190, maxWidth: '100%' }} />
-              <View style={{ padding: 10 }}>
+              <View style={{ padding: 5 }}>
                 <Text style={{ fontSize: 17, textAlign: 'center' }}>Web Development</Text>
                 <Text style={{ textAlignVertical: 'bottom', color: '#666', fontSize: 12, fontStyle: 'italic', marginTop: 20 }}>Based on your interest in: Writing, Mathematics</Text>
               </View>
             </View>
             <View style={styles.interest}>
               <Image source={require('../../assets/coding.jpg')} style={{ height: 190, maxWidth: '100%' }} />
-              <View style={{ padding: 10 }}>
+              <View style={{ padding: 5 }}>
                 <Text style={{ fontSize: 17, textAlign: 'center' }}>Web Development</Text>
                 <Text style={{ textAlignVertical: 'bottom', color: '#666', fontSize: 12, fontStyle: 'italic', marginTop: 20 }}>Based on your interest in: Writing, Mathematics</Text>
               </View>
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#373737',
     width: '100%',
+    borderBottomWidth: 0
   },
   explore: {
     padding: 20,
@@ -88,7 +89,8 @@ const styles = StyleSheet.create({
     width: '45%',
     height: 320,
     backgroundColor: '#48D1CC',
-    margin: 9,
+    margin: 7,
     marginTop: 0,
+    borderRadius: 10
   }
 });
