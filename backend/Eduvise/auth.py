@@ -4,8 +4,8 @@ import json
 from flask import (
     Blueprint, render_template, request, url_for, redirect
 )
-from models import User
-from flask_mongoengine import DoesNotExist, login_user
+from .models import User
+from flask_mongoengine import DoesNotExist
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 CORS(bp)
