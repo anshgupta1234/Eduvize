@@ -1,5 +1,5 @@
 import json
-from khan_api import KhanAcademySignIn, KhanAPI
+from .khan_api import KhanAcademySignIn, KhanAPI
 from flask import (
     Blueprint, render_template, request, url_for, redirect
 )
