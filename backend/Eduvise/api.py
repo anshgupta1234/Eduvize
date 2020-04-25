@@ -54,7 +54,8 @@ def update():
 
     try:
         username = db.search("dun")
-        dpoints = duolingoUpdate(username)
+        dpoints, language = duolingoUpdate(username)
+        db.updateOne("language", language)
         point_dict["Duolingo"] = dpoints
     except:
         dpoints = 0

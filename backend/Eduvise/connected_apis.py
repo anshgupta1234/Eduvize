@@ -33,7 +33,7 @@ def duolingoUpdate(username):
     students = response.json()["students"]
     for i in students:
         if i["username"] == username:
-            return i["xp"]["points"]
+            return i["xp"]["points"], i["xp"]["language_name"]
         else:
             raise "username not found in student list"
     return 0
