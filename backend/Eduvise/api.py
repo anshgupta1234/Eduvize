@@ -7,7 +7,7 @@ from flask_cors import CORS
 import requests
 from .connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch, caUpdate, caLink
 
-from .db import DataBase
+from .pymongo_db import DataBase
 
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)

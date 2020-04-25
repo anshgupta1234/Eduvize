@@ -3,11 +3,13 @@ from . import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class User(UserMixin, db.Document):
-    email = db.StringField(max_length=30, unique=True)
-    password = db.StringField(True)
+    email = db.StringField(max_length=50, unique=True)
+    password = db.StringField()
     points = db.IntField(default=0)
-    first_name = db.StringField()
-    last_name = db.StringField()
+    display_name = db.StringField()
+    nitrotype_id = db.StringField()
+    khan_token = db.StringField()
+    khan_secret = db.StringField()
 
     def set_password(self, password):
         """Create hashed password."""
@@ -29,4 +31,4 @@ class User(UserMixin, db.Document):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.get(id=user_id)
+    return User.objects.get(id=user_id)

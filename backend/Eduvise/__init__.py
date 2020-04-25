@@ -3,14 +3,19 @@ import os
 from flask import Flask, render_template, send_from_directory
 from flask_login import LoginManager
 from flask_mongoengine import MongoEngine
+from flask.json import JSONEncoder
+from bson import json_util
 db = MongoEngine()
 login_manager = LoginManager()
 from . import api, auth, models, webviews
 
+class CustomJSONEncoder(JSONEncoder):
+    def default(self, obj): return str(obj)
+
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    db.init_app(app)
+    app.json_encoder = CustomJSONEncoder
     login_manager.init_app(app)
     with open("Eduvise/secrets.txt") as f:
         lines = f.readlines()
@@ -19,11 +24,9 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY='secret_key',
         static_url_path='static/',
-        MONGODB_SETTINGS={
-            'db': 'Eduvise',
-            'host': 'mongodb+srv://admin:'+mongo_pw+'@eduvise-f0zco.gcp.mongodb.net/test?retryWrites=true&w=majority'
-        }
+        MONGODB_HOST="mongodb+srv://admin:{}@eduvise-f0zco.gcp.mongodb.net/Eduvise?retryWrites=true&w=majority".format(mongo_pw)
     )
+    db.init_app(app)
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -40,4 +43,5 @@ def create_app(test_config=None):
 
     app.register_blueprint(api.bp)
     app.register_blueprint(webviews.bp)
+    app.register_blueprint(auth.bp)
     return app
