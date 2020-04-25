@@ -6,7 +6,7 @@ from flask import (
 )
 from .models import User
 from flask_mongoengine import DoesNotExist
-flask_cors import CORS
+from flask_cors import CORS
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 CORS(bp)

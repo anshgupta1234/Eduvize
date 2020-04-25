@@ -5,6 +5,7 @@ import {normalize} from "react-native-elements";
 import {NavigationContainer} from "@react-navigation/native";
 import { Input } from "react-native-elements";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { ip } from "../utils/exports";
 
 const baseUrl = "https://10.0.2.2:3001";
 
@@ -14,16 +15,11 @@ const width = Dimensions.get('window').width;
 class LoginTab extends Component {
 
 state = {
-      fullName: '',
       username: '',
       email: '',
       password: '',
-      confirmPassword: '',
-      usernameErrorMessage: '',
       emailErrorMessage: '',
       passwordErrorMessage: '',
-      confirmPasswordErrorMessage: '',
-      fullNameErrorMessage: '',
   };
 
   constructor(props) {
@@ -52,51 +48,8 @@ state = {
     }
   };
 
-  sendInfo(name, email, username, password, password2, signup) {
-    if (signup) {
-      fetch("https://ns.21xayah.com/auth/signup", {
-        method: 'POST',
-        body: JSON.stringify({
-          username: username,
-          email: email,
-          password_1: password,
-          password_2: password2,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      }).then(response => response.json())
-        .then(response => {
-          if (response.success === true) {
-            this.login(username, password);
-            this.props.navigation.navigate('HomeScreen');
-          }
-          else {
-            switch (response.data.message()) {
-              case 'already_exists':
-                this.setState({emailErrorMessage: "An account already exists with this e-mail."});
-                break;
-              case 'invalid_email':
-                this.setState({emailErrorMessage: "The email is invalid."});
-                break;
-              case 'username_short':
-                this.setState({usernameErrorMessage: "The username must be 4 characters or longer."});
-                break;
-              case 'password_missmatch':
-                this.setState({confirmPasswordErrorMessage: "Passwords do not match"});
-                break;
-              case 'password_short':
-                this.setState({passwordErrorMessage: "The password must be 8 characters or longer."});
-                break;
-            }
-          }
-        })
-    } else this.login(username, password)
-  }
-
   login(username, password){
-    this.props.navigation.navigate('App')
-    /*fetch("https://ns.21xayah.com/auth/login", {
+    fetch(`http://${ip}:5000/login/`, {
       method: 'POST',
       body: JSON.stringify({
         name: username,
@@ -109,21 +62,18 @@ state = {
       .then(response => {
         if(response.success === true){
           this.storeToken(response.data.token);
-          this.props.navigation.navigate('HomeScreen');
+          this.props.navigation.navigate('App');
         }
         else if(response.data.message === 'not_found'){
           if(password === '') this.setState({ passwordErrorMessage: 'Email or Password is incorrect' });
         }
-      })*/
+      })
   }
 
   fieldsEmpty(){
     const { username, password, confirmPassword, fullName, email } = this.state;
     let fieldEmpty = true;
-    if(username === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(password === '') this.setState({ passwordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
-    if(confirmPassword === '') this.setState({ confirmPasswordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
-    if(fullName === '') this.setState({ fullNameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(email === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     return fieldEmpty
   }
@@ -132,25 +82,10 @@ state = {
       const { username, password, confirmPassword, fullName, email } = this.state;
       let validated = false;
       let errorMessage = '';
-      if (this.signup) {
-          if (password !== confirmPassword) {
-            this.setState({ confirmPasswordErrorMessage: "Passwords do not match"})
-          } if (password.length < 7) {
-            this.setState({ passwordErrorMessage: "The password must be 7 characters or longer." })
-          } else if (!this.isAlphaNumeric(password)) {
-            this.setState({ passwordErrorMessage: "The password must be alphanumeric(a-z, 0-9)" })
-          } if (!this.validateEmail(email)) {
-            this.setState({ emailErrorMessage: "The email is invalid." })
-          } if (username.length < 4) {
-            this.setState({ usernameErrorMessage: "The username must be 4 characters or longer." })
-          } else if(!this.fieldsEmpty()) {
-            validated = true
-          }
-      } else if(!this.fieldsEmpty()) {
+      if(!this.fieldsEmpty()) {
         validated = true
       }
 
-      //if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
       if (validated) this.props.navigation.navigate("App");
       else this.setState({ passwordErrorMessage: 'Email or Password is wrong' })
   };
@@ -158,11 +93,8 @@ state = {
   onChangeText = (stateObject, text) => {
       this.setState({
           [stateObject]: text,
-          usernameErrorMessage: '',
           emailErrorMessage: '',
           passwordErrorMessage: '',
-          confirmPasswordErrorMessage: '',
-          fullNameErrorMessage: '',
       });
   };
 
@@ -205,16 +137,12 @@ state = {
 class SignupTab extends Component {
 
   state = {
-      fullName: '',
-      username: '',
       email: '',
       password: '',
       confirmPassword: '',
-      usernameErrorMessage: '',
       emailErrorMessage: '',
       passwordErrorMessage: '',
       confirmPasswordErrorMessage: '',
-      fullNameErrorMessage: '',
   };
 
   constructor(props) {
@@ -248,17 +176,13 @@ class SignupTab extends Component {
     }
   };
 
-  sendInfo(name, email, username, password, password2, signup) {
+  sendInfo(email, password, password2, signup) {
     if (signup) {
       fetch("https://ns.21xayah.com/auth/signup", {
         method: 'POST',
         body: JSON.stringify({
-          username: username,
           email: email,
-          password_1: password,
-          password_2: password2,
-          full_name: name,
-          gToken: this.token
+          password: password,
         }),
         headers: {
           'Content-Type': 'application/json',
@@ -292,35 +216,11 @@ class SignupTab extends Component {
     } else this.login(username, password)
   }
 
-  login(username, password){
-    fetch("https://ns.21xayah.com/auth/login", {
-      method: 'POST',
-      body: JSON.stringify({
-        name: username,
-        password: password
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    }).then(response => response.json())
-      .then(response => {
-        if(response.success === true){
-          this.storeToken(response.data.token);
-          this.props.navigation.navigate('HomeScreen');
-        }
-        else if(response.data.message === 'not_found'){
-          if(password === '') this.setState({ passwordErrorMessage: 'Email or Password is incorrect' });
-        }
-      })
-  }
-
   fieldsEmpty(){
     const { username, password, confirmPassword, fullName, email } = this.state;
     let fieldEmpty = true;
-    if(username === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(password === '') this.setState({ passwordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(confirmPassword === '') this.setState({ confirmPasswordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
-    if(fullName === '') this.setState({ fullNameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(email === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     return fieldEmpty
   }
@@ -338,8 +238,6 @@ class SignupTab extends Component {
             this.setState({ passwordErrorMessage: "The password must be alphanumeric(a-z, 0-9)" })
           } if (!this.validateEmail(email)) {
             this.setState({ emailErrorMessage: "The email is invalid." })
-          } if (username.length < 4) {
-            this.setState({ usernameErrorMessage: "The username must be 4 characters or longer." })
           } else if(!this.fieldsEmpty()) {
             validated = true
           }
@@ -355,11 +253,9 @@ class SignupTab extends Component {
   onChangeText = (stateObject, text) => {
       this.setState({
           [stateObject]: text,
-          usernameErrorMessage: '',
           emailErrorMessage: '',
           passwordErrorMessage: '',
           confirmPasswordErrorMessage: '',
-          fullNameErrorMessage: '',
       });
   };
 
@@ -368,16 +264,6 @@ class SignupTab extends Component {
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <Image source={require("../../assets/icon.png")} style={styles.logo} />
         <Text style={{ fontSize: 20, marginBottom: 20 }}>Eduvize</Text>
-        <Input
-            leftIcon={{ type: 'material', name: 'person', color: '#999', marginRight: 10 }}
-            onChangeText={(text) => this.onChangeText('username', text)}
-            placeholder="Username"
-            secureTextEntry={false}
-            value={this.state.username}
-            containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}
-            showBottomBorder={false}
-            errorMessage={this.state.usernameErrorMessage}
-        />
         {this.signup &&
             <Input
                 leftIcon={{ type: 'material', name: 'mail', color: '#999', marginRight: 10 }}
