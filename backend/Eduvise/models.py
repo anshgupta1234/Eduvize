@@ -9,6 +9,7 @@ class User(UserMixin, db.Document):
     nitrotype_id = db.StringField()
     khan_token = db.StringField()
     khan_secret = db.StringField()
+    points = db.IntField()
 
     def set_password(self, password):
         """Create hashed password."""
