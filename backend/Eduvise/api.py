@@ -5,7 +5,7 @@ from flask import (
 )
 from flask_cors import CORS
 import requests
-from connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch, caUpdate, caLink
+from connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)
 
@@ -30,27 +30,14 @@ def update():
     # uid = request.args.get('userId')
     # TODO: only make function calls to update APIs if the data needed for the API exists in their account
     # TODO: return not only points but a list of all APIs used in their account
-
     access_token = "t6564182086795264" # this is my personal temp token
     access_token_secret = "shyNWuxVazvXZMWP" # this is my personal temp secret token plz no steal
     username = 'EricAndrechek' # my personal duolingo username but pull from db in actual usage
     ntid = "39345240" # grab this from db
-    caun = "Canada_Eric" # codeacademy username from db
-
     nickname, points = khanUpdate(access_token, access_token_secret)
-    print(points)
-
     dpoints = duolingoUpdate(username)
-    print(dpoints)
-
     ntpoints = nitroUpdate(ntid)
-    print(ntpoints * 100)
-
-    capoints = caUpdate(caun)
-    print(capoints * 10)
-
-    eduvise_points = dpoints + points + (ntpoints * 100) + (capoints * 10)
-
+    eduvise_points = dpoints + points + (ntpoints * 100)
     return str(eduvise_points)
 
 @bp.route("/duolingo", methods=("POST", "GET"))
@@ -71,13 +58,3 @@ def nitrotype():
         # uid = request.get_json()["userId"]
         ntid = request.get_json()["accountId"]
         return "Account now linked!"
-
-@bp.route("/ca")
-def codeacademy():
-    # uid = request.args.get('userId')
-    username = request.args.get('username')
-    if caLink(username) == 404:
-        return "Username not found. Try another one."
-    else:
-        # add username to userid part of db
-        return "Thank you. Your account has been linked."
