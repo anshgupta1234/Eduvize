@@ -13,8 +13,8 @@ const width = Dimensions.get('window').width;
 class LoginTab extends Component {
 
 state = {
-      email: 'chunky@gmail.com',
-      password: 'halloguys',
+      email: 'yeet@gmail.com',
+      password: 'prince101',
       emailErrorMessage: '',
       passwordErrorMessage: '',
   };
@@ -37,31 +37,25 @@ state = {
       return true;
   };
 
-  storeToken = async(token) => {
-    try {
-      await AsyncStorage.setItem('token', token);
-    } catch (e) {
-      alert(e)
-    }
-  };
-
   login(){
     fetch(`http://${ip}:5000/auth/login/`, {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
-        password: this.state.email
+        password: this.state.password
       }),
       headers: {
         'Content-type': 'application/json',
-        "cookie": "session=.eJwlzjsOwjAMANC7ZGZwnNiJe5kq_gnWlk6Iu1OJE7z3KXsecT7L9j6ueJT95WUrLBxBNMQsxCQakDedSzq5Ahsu81UJ0CIrQLPsjqJSly0VQk9SGQ5NiNvQ0DYYaoXZUX3OXEIkki0G5WS7LVjEDjqyV51Y7sh1xvHfUKyutU2b3ZArdsBMTizfH45YNdg.XqS5aw.r_Q_09NgKpTXvIAO6ODIcmDQH2U",
-      }
-    }).then(res => res.text()).then(async(res) => {
+      },
+      credentials: "include"
+    }).then(async(res) => {
+      const cookie = res.headers.map['set-cookie'].replace('; HttpOnly; Path=/', '');
+      await AsyncStorage.setItem('token2', cookie);
+      return res.json()
+    }).then((res) => {
       if(res.success){
-        const response = await AsyncStorage.setItem('cookie', res.headers["Set-Cookie"]);
-        this.props.navigation.navigate('App')
+        this.props.navigation.navigate('App');
       } else {
-        console.log(res);
         this.setState({ passwordErrorMessage: "Wrong password / email!" })
       }
     });
@@ -136,9 +130,11 @@ class SignupTab extends Component {
       email: '',
       password: '',
       confirmPassword: '',
+      username: '',
       emailErrorMessage: '',
       passwordErrorMessage: '',
       confirmPasswordErrorMessage: '',
+      usernameErrorMessage: ''
   };
 
   constructor(props) {
@@ -172,44 +168,29 @@ class SignupTab extends Component {
     }
   };
 
-  sendInfo(email, password, password2, signup) {
-    if (signup) {
-      fetch("https://ns.21xayah.com/auth/signup", {
-        method: 'POST',
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      }).then(response => response.json())
-        .then(response => {
-          if (response.success === true) {
-            this.login(username, password);
-            this.props.navigation.navigate('HomeScreen');
-          }
-          else {
-            switch (response.data.message()) {
-              case 'already_exists':
-                this.setState({emailErrorMessage: "An account already exists with this e-mail."});
-                break;
-              case 'invalid_email':
-                this.setState({emailErrorMessage: "The email is invalid."});
-                break;
-              case 'username_short':
-                this.setState({usernameErrorMessage: "The username must be 4 characters or longer."});
-                break;
-              case 'password_missmatch':
-                this.setState({confirmPasswordErrorMessage: "Passwords do not match"});
-                break;
-              case 'password_short':
-                this.setState({passwordErrorMessage: "The password must be 8 characters or longer."});
-                break;
-            }
-          }
-        })
-    } else this.login(username, password)
+  sendInfo() {
+    fetch(`http://${ip}:5000/auth/register/`, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+        display_name: this.state.username
+      }),
+      headers: {
+        'Content-type': 'application/json',
+      },
+      credentials: "include"
+    }).then(async(res) => {
+      const cookie = res.headers.map['set-cookie'].replace('; HttpOnly; Path=/', '');
+      await AsyncStorage.setItem('token', cookie);
+      return res.json()
+    }).then((res) => {
+      if(res.success){
+        this.props.navigation.navigate('App');
+      } else {
+        this.setState({ passwordErrorMessage: "Wrong password / email!" })
+      }
+    });
   }
 
   fieldsEmpty(){
@@ -217,7 +198,8 @@ class SignupTab extends Component {
     let fieldEmpty = true;
     if(password === '') this.setState({ passwordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     if(confirmPassword === '') this.setState({ confirmPasswordErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
-    if(email === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
+    if(email === '') this.setState({ emailErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
+    if(username === '') this.setState({ usernameErrorMessage: "This field cannot be empty" }); fieldEmpty =  false;
     return fieldEmpty
   }
 
@@ -242,7 +224,7 @@ class SignupTab extends Component {
       }
 
       //if (validated) this.sendInfo(fullName, email, username, password, confirmPassword, this.signup);
-      if (validated) this.props.navigation.navigate("App");
+      if (validated) this.sendInfo();
       else this.setState({ passwordErrorMessage: 'Email or Password is wrong' })
   };
 
@@ -252,6 +234,7 @@ class SignupTab extends Component {
           emailErrorMessage: '',
           passwordErrorMessage: '',
           confirmPasswordErrorMessage: '',
+          usernameErrorMessage: '',
       });
   };
 
@@ -260,6 +243,15 @@ class SignupTab extends Component {
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <Image source={require("../../assets/icon.png")} style={styles.logo} />
         <Text style={{ fontSize: 20, marginBottom: 20 }}>Eduvize</Text>
+        <Input
+            leftIcon={{ type: 'material', name: 'person', color: '#999', marginRight: 10 }}
+            onChangeText={(text) => this.onChangeText('username', text)}
+            placeholder="Display Name"
+            secureTextEntry={true}
+            value={this.state.username}
+            containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}
+            showBottomBorder={false}
+            errorMessage={this.state.usernameErrorMessage} />
         {this.signup &&
             <Input
                 leftIcon={{ type: 'material', name: 'mail', color: '#999', marginRight: 10 }}
@@ -321,7 +313,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#e6e6e6",
         borderRadius: 15,
         overflow: "hidden",
-        fontSize: normalize(16),
         height: 60,
         justifyContent: 'center',
         width: width * 0.9

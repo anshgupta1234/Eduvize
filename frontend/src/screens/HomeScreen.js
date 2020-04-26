@@ -9,7 +9,9 @@ import {
   Linking,
   Button,
   TextInput,
+  AsyncStorage,
   StatusBar,
+  RefreshControl
 } from "react-native";
 import {Body, Left, Right} from "native-base";
 import { Header } from 'native-base'
@@ -22,13 +24,24 @@ import { ip } from "../utils/exports";
 export default class HomeScreen extends Component {
 
   componentDidMount(){
+    this.getAmtTokens()
+  }
+
+  getAmtTokens = async() => {
+    const cookie = await AsyncStorage.getItem('token2');
+    console.log(cookie);
+    this.setState({ refreshing: true });
+    this.setState({ cookie });
     fetch(`http://${ip}:5000/api/update`, {
       method: 'GET',
+      headers: {
+        'Cookie': cookie
+      }
     }).then(res => res.json())
       .then(res => {
-        this.setState({ khan: res["Khan Academy"], duo: res["Duolingo"], nitro: res["Nitrotype"], code: res["Codeacademy"], points: res["Total Points"] })
-      })
-  }
+        this.setState({ khan: res["Khan Academy"], duo: res["Duolingo"], nitro: res["Nitrotype"], code: res["Codeacademy"], tokens: res["Total Points"], refreshing: false })
+      });
+  };
 
   state = {
     duoVisible: false,
@@ -37,10 +50,20 @@ export default class HomeScreen extends Component {
     nitroName: "",
     codeVisible: false,
     codeName: "",
+    tokens: 0,
+    refreshing: false
   };
 
   connectKhan = async() => {
-    const result = await WebBrowser.openBrowserAsync(`http://${ip}:5000/api/ka`)
+    fetch('http://192.168.10.104:5000/api/ka', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+        'Cookie': this.state.cookie
+      }
+    }).then(res => res.json()).then(async(res) => {
+      await WebBrowser.openBrowserAsync(res.url)
+    });
   };
 
   connectDuo = async() => {
@@ -48,7 +71,8 @@ export default class HomeScreen extends Component {
     fetch(`http://${ip}:5000/api/duolingo`, {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Cookie': this.state.cookie
       },
       body: JSON.stringify({
         username: this.state.duoName
@@ -74,12 +98,16 @@ export default class HomeScreen extends Component {
     this.setState({ codeVisible: false });
     fetch(`http://${ip}:5000/api/ca?userId=0000&username=` + this.state.codeName, {
       method: 'GET',
+      'Cookie': this.state.cookie
     }).then(res => this.setState({ codeVisible: false }))
   };
 
   connectNitro = () => {
     fetch(`http://${ip}:5000/api/nt?q=${this.state.nitroName}`, {
       method: 'GET',
+      headers: {
+        'Cookie': this.state.cookie
+      },
     }).then(res => res.json()).then(res => {
       if (res.results[0] !== null) {
         const account = res.results[0];
@@ -87,11 +115,11 @@ export default class HomeScreen extends Component {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
+            'Cookie': this.state.cookie
           },
-          body: {
-            userId: "0000",
+          body: JSON.stringify({
             accountId: account.accountId
-          }
+          })
         }).then(() => this.setState({ nitroVisible: false }))
       }
     })
@@ -108,7 +136,7 @@ export default class HomeScreen extends Component {
           <Right>
             <View style={{ flexDirection: 'row', marginTop: 10, justifyContent: 'center', height: '100%' }}>
               <Image style={{ width: 35, height: 35 }} source={require('../../assets/icon.png')} />
-              <Text style={{ fontSize: 17, color: 'white' }}>  4568</Text>
+              <Text style={{ fontSize: 17, color: 'white' }}>  {this.state.tokens}</Text>
             </View>
           </Right>
         </Header>
@@ -138,7 +166,9 @@ export default class HomeScreen extends Component {
           </View>
         </Modal>
         <View style={{ paddingLeft: 15 }}>
-          <ScrollView contentContainerStyle={{ alignItems: 'center', padding: 30, justifyContent: 'center' }}>
+          <ScrollView
+            refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={this.getAmtTokens} />}
+            contentContainerStyle={{ alignItems: 'center', padding: 30, justifyContent: 'center' }}>
             <LinearGradient colors={['#9C56FF', '#b168e0']} style={{ margin: 10, width: '100%', borderRadius: 5, alignSelf: 'flex-end' }}>
               <View style={{ padding: 15 }}>
                  <Text style={{ fontSize: 16, color: 'white', textAlign: 'center', marginHorizontal: 20 }}>Connect to these services to earn more points!</Text>
@@ -181,6 +211,39 @@ export default class HomeScreen extends Component {
                   </View>
               </View>
             </LinearGradient>
+            <Text style={{ fontSize: 18, color: 'white', marginVertical: 20, width: '100%' }}>Lifetime Tokens</Text>
+            {
+              this.state.khan ? (
+                <View style={{ width: '100%', height: 75, backgroundColor: '#102b61', borderRadius: 15, justifyContent: 'space-between', padding: 10, flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
+                  <Image source={require('../../assets/khan.png')} style={{ width: 60, height: 60 }} />
+                  <Text style={{ fontSize: 20, color: '#32CD32' }}>+{this.state.khan}</Text>
+                </View>
+              ) : null
+            }
+            {
+              this.state.code ? (
+                <View style={{ width: '100%', height: 75, backgroundColor: 'white', borderRadius: 15, justifyContent: 'space-between', padding: 10, flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
+                  <Image source={require('../../assets/code.png')} style={{ width: 60, height: 60 }} />
+                  <Text style={{ fontSize: 20, color: '#32CD32' }}>+{this.state.code}</Text>
+                </View>
+              ) : null
+            }
+            {
+              this.state.duo ? (
+                <View style={{ width: '100%', height: 75, backgroundColor: 'yellow', borderRadius: 15, justifyContent: 'space-between', padding: 10, flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
+                  <Image source={require('../../assets/duo.png')} style={{ width: 60, height: 60 }} />
+                  <Text style={{ fontSize: 20, color: '#32CD32' }}>+{this.state.duo}</Text>
+                </View>
+              ) : null
+            }
+            {
+              this.state.nitro ? (
+                <View style={{ width: '100%', height: 75, backgroundColor: '#d72b37', borderRadius: 15, justifyContent: 'space-between', padding: 10, flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
+                  <Image source={require('../../assets/nitro2.png')} style={{ width: 60, height: 60 }} />
+                  <Text style={{ fontSize: 20, color: '#32CD32' }}>+{this.state.nitro}</Text>
+                </View>
+              ) : null
+            }
           </ScrollView>
         </View>
       </View>

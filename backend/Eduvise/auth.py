@@ -11,6 +11,7 @@ from flask_cors import CORS
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 CORS(bp)
 
+
 @bp.route('/register/', methods=['POST'])
 def register():
     request_json = request.get_json()
@@ -20,7 +21,7 @@ def register():
         display_name = request_json['display_name']
     except KeyError:
         abort(400)
-    try:   
+    try:
         existing_user = User.objects.get(email=request_json['email'])
         print(existing_user)
         return jsonify({"success": False, "cause": "user exists"})
@@ -31,6 +32,7 @@ def register():
         new_user.save()
         login_user(new_user)
         return jsonify({"success": True})
+
 
 @bp.route('/login/', methods=['POST'])
 def login():
@@ -50,8 +52,8 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return jsonify({ "success": True })
-    
+    return jsonify({"success": True})
+
 
 @bp.route('/web_profile/')
 @login_required
