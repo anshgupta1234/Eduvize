@@ -59,4 +59,13 @@ This webhook analyzes as much data it can from your account, including what lang
 ## Frontend Structure
 
 ### Explore Tab:
-The explore tab does things ansh will explain further
+The explore tab helps users find new areas to explore on Khan academy using /explore
+
+### Dashboard Tab:
+Shows a summary of tokens earned and is the portal for connecting new services. Accomplished mainly through /api/ka. Uses Expo's Web Browser to redirect with OAuth
+
+### Leaderboard Tab:
+Shows most amount of tokens earned with react-native-leaderboard. Uses /api/lb to pull this data.
+
+### Store Tab:
+Mainly for style, not actually implemented yet.
