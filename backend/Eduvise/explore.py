@@ -37,4 +37,4 @@ def train_kmeans():
 @bp.route('/recommend/', methods=["POST"])
 @login_required
 def recommend():
-    user_badges = current_user.badges
+    user_badges = set(current_user.badges)
