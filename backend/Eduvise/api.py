@@ -51,7 +51,8 @@ def update():
     try:
         access_token = db.search("kaat")
         access_token_secret = db.search("kaats")
-        nickname, kapoints = khanUpdate(access_token, access_token_secret)
+        nickname, kapoints, badges = khanUpdate(access_token, access_token_secret)
+        db.updateOne('badge_names', badges)
         kapoints = int(kapoints / 100)
         point_dict["Khan Academy"] = kapoints
     except:

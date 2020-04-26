@@ -9,9 +9,16 @@ def khanUpdate(access_token, access_token_secret):
     kaid = kapi.user()["kaid"]
     profile = KhanAPI(access_token, access_token_secret, "/api/internal/user/profile")
     person = profile.user({"kaid": kaid})
+    badges = KhanAPI(access_token, access_token_secret, "/api/internal/user/badges")
+    resp = (badges.user({"kaid": kaid}))["badgeCollections"]
+    badgenames = []
+    for cat in resp:
+        for bad in cat["badges"]:
+            if bad["isOwned"]:
+                badgenames.append(bad["name"])
     nickname = person["nickname"]
     points = person["points"]
-    return nickname, points
+    return nickname, points, badgenames
 
 def duolingoUpdate(username):
     url = "https://schools.duolingo.com/api/1/observers/classroom_students?classroom_id=3735642&_=1587666580975"
