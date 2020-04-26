@@ -9,6 +9,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import StoreScreen from "./src/screens/StoreScreen";
 import ExploreScreen from "./src/screens/ExploreScreen";
 import LoginScreen from "./src/screens/LoginScreen";
+import LeaderboardScreen from "./src/screens/LeaderboardScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +26,10 @@ function Main(){
           } else if (route.name === 'Explore!') {
             iconName = 'school';
             return <Icon name={iconName} size={size} color={color} type='material'/>;
-          } else if (route.name === 'Store') {
+          } else if (route.name === 'Leaderboard') {
+            iconName = 'school';
+            return <Icon name={iconName} size={size} color={color} type='material'/>;
+          }else if (route.name === 'Store') {
             iconName = 'ios-settings';
             return <Image source={require('./assets/icon.png')} style={{ width: size, height: size }}/>
           } else if (route.name === 'Profile') {
@@ -49,6 +53,7 @@ function Main(){
     >
       <Tab.Screen name="Dashboard" component={HomeScreen} />
       <Tab.Screen name="Explore!" component={ExploreScreen} />
+      <Tab.Screen name="Leaderboard" component={LeaderboardScreen} />
       <Tab.Screen name="Store" component={StoreScreen} />
       <Tab.Screen name="Profile" component={SettingsScreen} />
     </Tab.Navigator>
