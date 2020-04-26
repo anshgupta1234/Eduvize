@@ -11,6 +11,7 @@ from .pymongo_db import DataBase, GetID
 
 from flask_login import current_user
 
+
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)
 
@@ -51,7 +52,7 @@ def update():
         access_token = db.search("kaat")
         access_token_secret = db.search("kaats")
         nickname, kapoints = khanUpdate(access_token, access_token_secret)
-        kapoints = kapoints / 100
+        kapoints = int(kapoints / 100)
         point_dict["Khan Academy"] = kapoints
     except:
         kapoints = 0
@@ -60,7 +61,7 @@ def update():
         username = db.search("dun")
         dpoints, language = duolingoUpdate(username)
         db.updateOne("language", language)
-        dpoints = dpoints / 100
+        dpoints = int(dpoints / 10)
         point_dict["Duolingo"] = dpoints
     except:
         dpoints = 0
@@ -68,25 +69,25 @@ def update():
     try:
         ntid = db.search("ntid")
         ntpoints = nitroUpdate(ntid)
-        ntpoints = ntpoints * 10
+        ntpoints = int(ntpoints * 10)
         point_dict["Nitrotype"] = ntpoints
     except:
         ntpoints = 0
     
     try:
         caun = db.search("caun")
-        capoints = caUpdate(caun)
+        capoints = int(caUpdate(caun))
         point_dict["Codeacademy"] = capoints
     except:
         capoints = 0
     
     try:
-        spent = db.search("points_spent")
+        spent = int(db.search("points_spent"))
     except:
         spent = 0
     
     point_dict["points_spent"] = spent
-    eduvise_points = dpoints + kapoints + ntpoints + capoints - spent
+    eduvise_points = int(dpoints + kapoints + ntpoints + capoints - spent)
     point_dict["Total Points"] = eduvise_points
     db.updateMany(point_dict)
 
@@ -122,3 +123,10 @@ def codeacademy():
     else:
         DataBase(uid).updateOne("caun", username)
         return "Thank you. Your account has been linked."
+
+@bp.route('/lb')
+def leaderboard():
+    board = []
+    for user in GetID().leaderboard():
+        board.append(user)
+    return jsonify({"Leaderboard": board})
