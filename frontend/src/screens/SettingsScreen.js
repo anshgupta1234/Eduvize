@@ -5,20 +5,9 @@ import {normalize} from "react-native-elements";
 
 export default class SettingsScreen extends Component {
 
-  logout = async() => {
-    try {
-      await AsyncStorage.setItem('token', '');
-      alert('Logged Out!!')
-    } catch (e) {
-      alert(e)
-    }
-    this.props.navigation.navigate('LoginScreen')
-  };
-
   render(){
     return (
       <View style={styles.container}>
-        <StatusBar hidden />
         <Image style={{ width: 150, height: 150, borderRadius: 100, margin: 20 }} source={require('../../assets/profile-pic.jpeg')} />
         <Text style={{ fontWeight: "bold", fontSize: 20, color: 'white' }}>Ansh Gupta</Text>
         <View style={{ flexDirection: 'row', marginTop: 10 }}>

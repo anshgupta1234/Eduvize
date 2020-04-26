@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import { View, Text, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -27,8 +27,7 @@ function Main(){
             iconName = 'school';
             return <Icon name={iconName} size={size} color={color} type='material'/>;
           } else if (route.name === 'Leaderboard') {
-            iconName = 'school';
-            return <Icon name={iconName} size={size} color={color} type='material'/>;
+            return <Image source={require('./assets/leaderboard.png')} style={{ width: size, height: size, borderRadius: size/2 }}/>
           }else if (route.name === 'Store') {
             iconName = 'ios-settings';
             return <Image source={require('./assets/icon.png')} style={{ width: size, height: size }}/>
@@ -62,15 +61,21 @@ function Main(){
 
 const Stack = createStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="App" component={Main} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+class App extends Component {
+
+  setTokens = tokens => this.setState({ tokens });
+  setCookie = tokens => this.setState({ tokens });
+
+  render(){
+    return (
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="App" component={Main} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 }
 
 export default App;
