@@ -32,13 +32,11 @@ class KhanAcademySignIn:
         request_token, request_token_secret = self.service.get_request_token(
             params={"oauth_callback": self.get_callback_url()}, method="POST"
         )
-        self.session["request_token"] = request_token
-        self.session["request_token_secret"] = request_token_secret
+        session["request_token"] = request_token
+        session["request_token_secret"] = request_token_secret
         return request_token, request_token_secret, self.service.get_authorize_url(request_token)
 
-    def callback(self):
-        request_token = self.session.pop("request_token")
-        request_token_secret = self.session.pop("request_token_secret")
+    def callback(self, request_token, request_token_secret):
 
         if "oauth_verifier" not in request.args:
             return None, None, None

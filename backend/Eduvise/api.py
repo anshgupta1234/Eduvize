@@ -19,20 +19,21 @@ def oauth_authorize():
     uid = current_user.id # this is a placeholder, that will be a cookie
     oauth = KhanAcademySignIn()
     request_token, request_token_secret, url = oauth.authorize()
-    # add request tokens to db for specific user if cookies dont work for callback properly
-    DataBase(uid).updateMany({"kart": request_token, "karts": request_token_secret})
+    katoken = url.split("=")[1]
+    DataBase(uid).updateMany({"katoken": katoken, "kart": request_token, "karts": request_token_secret})
     return jsonify({"url": url})
 
 @bp.route("/oauth_callback")
 def oauth_callback():
-    # uid = current_user.id this is a placeholder, that will be a cookie. 
-    # if this doesnt work on callback we will nee line 21 uncommented and to add function here to search
-    # for user with matching kart and karts
-    oauth = KhanAcademySignIn()
-    access_token, access_token_secret, request_token, request_token_secret = oauth.callback()
+    katoken = request.args.get("oauth_token")
     pdb = GetID()
-    uid = pdb.keyvalue("kart", request_token)
-    DataBase(uid).updateMany({"kaat": access_token, "kaats": access_token_secret})
+    uid = pdb.keyvalue("katoken", katoken)
+    db = DataBase(uid)
+    kart = db.search("kart")
+    karts = db.search("karts")
+    oauth = KhanAcademySignIn()
+    access_token, access_token_secret, request_token, request_token_secret = oauth.callback(kart, karts)
+    db.updateMany({"kaat": access_token, "kaats": access_token_secret})
     # save access_token and access_token_secret to db field with mathing request token and request token secret
     nickname, points = khanUpdate(access_token, access_token_secret)
     return "Account {} is now connected! You have added {} points to your Eduvise account!".format(nickname, points)
