@@ -29,6 +29,8 @@ def train_kmeans():
 
     kmeans = KMeans(n_clusters=N_CLUSTERS).fit(training_data)
     labels = kmeans.predict(training_data)
+    for i in range(len(user_stack)):
+        user_stack[i].user_type = label[i]
 
 
 @bp.route('/recommend/', methods=["POST"])

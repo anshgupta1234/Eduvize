@@ -17,6 +17,7 @@ def register():
     try:
         email = request_json['email']
         pw = request_json['password']
+        display_name = request_json['display_name']
     except KeyError:
         abort(400)
     try:   
@@ -25,7 +26,7 @@ def register():
         return jsonify({"success": False, "cause": "user exists"})
     except DoesNotExist:
         print('creating user')
-        new_user = User(email=request_json['email'])
+        new_user = User(email=request_json['email'], display_name=display_name)
         new_user.set_password(request_json['password'])
         new_user.save()
         login_user(new_user)
