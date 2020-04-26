@@ -1,24 +1,14 @@
 import React, { Component } from 'react'
-import {View, Text, Image, StyleSheet, ScrollView, AsyncStorage} from "react-native";
+import {View, Text, Image, StyleSheet, ScrollView} from "react-native";
 import {Body, Header, Right} from "native-base";
 import {ButtonGroup, Icon} from "react-native-elements";
 import GiftCard from "../components/GiftCard";
 
 export default class StoreScreen extends Component {
 
-  componentDidMount(){
-    this.getTokens()
-  }
-
-  getTokens = async() => {
-    const tokens = await AsyncStorage.getItem('tokens');
-    this.setState({ tokens })
-  };
-
   state = {
     selectedIndex: 0,
-    value: 5,
-    tokens: 0
+    value: 5
   };
 
   render(){
@@ -31,7 +21,7 @@ export default class StoreScreen extends Component {
           <Right>
             <View style={{ flexDirection: 'row', marginTop: 10, justifyContent: 'center', height: '100%' }}>
               <Image style={{ width: 35, height: 35 }} source={require('../../assets/icon.png')} />
-              <Text style={{ fontSize: 17, color: 'white' }}>  {this.state.tokens}</Text>
+              <Text style={{ fontSize: 17, color: 'white' }}>  4568</Text>
             </View>
           </Right>
         </Header>

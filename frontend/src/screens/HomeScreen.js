@@ -32,14 +32,13 @@ export default class HomeScreen extends Component {
     console.log(cookie);
     this.setState({ refreshing: true });
     this.setState({ cookie });
-    fetch(`https://${ip}/api/update`, {
+    fetch(`http://${ip}:5000/api/update`, {
       method: 'GET',
       headers: {
         'Cookie': cookie
       }
     }).then(res => res.json())
-      .then(async(res) => {
-        await AsyncStorage.setItem('tokens', res["Total Points"].toString());
+      .then(res => {
         this.setState({ khan: res["Khan Academy"], duo: res["Duolingo"], nitro: res["Nitrotype"], code: res["Codeacademy"], tokens: res["Total Points"], refreshing: false })
       });
   };
@@ -56,7 +55,7 @@ export default class HomeScreen extends Component {
   };
 
   connectKhan = async() => {
-    fetch('https://192.168.10.104/api/ka', {
+    fetch('http://192.168.10.104:5000/api/ka', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -69,7 +68,7 @@ export default class HomeScreen extends Component {
 
   connectDuo = async() => {
     this.setState({ duoVisible: false });
-    fetch(`https://${ip}/api/duolingo`, {
+    fetch(`http://${ip}:5000/api/duolingo`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -78,7 +77,7 @@ export default class HomeScreen extends Component {
       body: JSON.stringify({
         username: this.state.duoName
       })
-    }).then(WebBrowser.openBrowserAsync(`https://${ip}/api/duolingo`))
+    }).then(WebBrowser.openBrowserAsync(`http://${ip}:5000/api/duolingo`))
   };
 
   getHealthData = () => {
@@ -97,14 +96,14 @@ export default class HomeScreen extends Component {
 
   connectCode = () => {
     this.setState({ codeVisible: false });
-    fetch(`https://${ip}/api/ca?userId=0000&username=` + this.state.codeName, {
+    fetch(`http://${ip}:5000/api/ca?userId=0000&username=` + this.state.codeName, {
       method: 'GET',
       'Cookie': this.state.cookie
     }).then(res => this.setState({ codeVisible: false }))
   };
 
   connectNitro = () => {
-    fetch(`https://${ip}/api/nt?q=${this.state.nitroName}`, {
+    fetch(`http://${ip}:5000/api/nt?q=${this.state.nitroName}`, {
       method: 'GET',
       headers: {
         'Cookie': this.state.cookie
@@ -112,7 +111,7 @@ export default class HomeScreen extends Component {
     }).then(res => res.json()).then(res => {
       if (res.results[0] !== null) {
         const account = res.results[0];
-        fetch(`https://${ip}/api/nt`, {
+        fetch(`http://${ip}:5000/api/nt`, {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
@@ -168,7 +167,7 @@ export default class HomeScreen extends Component {
         </Modal>
         <View style={{ paddingLeft: 15 }}>
           <ScrollView
-            refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={this.getAmtTokens} style={{ height: 0 }}/>}
+            refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={this.getAmtTokens} />}
             contentContainerStyle={{ alignItems: 'center', padding: 30, justifyContent: 'center' }}>
             <LinearGradient colors={['#9C56FF', '#b168e0']} style={{ margin: 10, width: '100%', borderRadius: 5, alignSelf: 'flex-end' }}>
               <View style={{ padding: 15 }}>
