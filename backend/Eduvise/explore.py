@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.preprocessing import label_binarize
 from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
 from .models import User
 from flask import (
     Blueprint, abort, render_template, request, url_for, redirect, jsonify
@@ -14,26 +15,26 @@ CORS(bp)
 N_CLUSTERS=3
 BADGE_CLASSES = ["red", "green", "blue"]
 
-
 def get_badges(user):
     label_binarize(user.badges, classes=BADGE_CLASSES)
 
 def train_kmeans():
-    training_data = np.array([])
+    raw_training_data = np.array([])
     user_stack = []
     for user in User.objects:
-        training_data.append(get_badges(user))
+        raw_training_data.append(get_badges(user))
         user_stack.append(user)
 
     #Perform PCA - avoid curse of dimensionality
+    training_data = PCA().fit_trainsform(raw_training_data)
 
     kmeans = KMeans(n_clusters=N_CLUSTERS).fit(training_data)
     labels = kmeans.predict(training_data)
     for i in range(len(user_stack)):
-        user_stack[i].user_type = label[i]
+        user_stack[i].user_type = labels[i]
 
 
 @bp.route('/recommend/', methods=["POST"])
 @login_required
 def recommend():
-    user_badges = get_badges(current_user)
+    user_badges = current_user.badges

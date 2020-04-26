@@ -8,7 +8,7 @@ import requests
 from .connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch, caUpdate, caLink
 
 from .pymongo_db import DataBase, GetID
-
+from .explore import train_kmeans
 from flask_login import current_user
 
 bp = Blueprint('api', __name__, url_prefix='/api')
@@ -36,6 +36,9 @@ def oauth_callback():
     db.updateMany({"kaat": access_token, "kaats": access_token_secret})
     # save access_token and access_token_secret to db field with mathing request token and request token secret
     nickname, points = khanUpdate(access_token, access_token_secret)
+    train_kmeans() #while amount of data is small, this will increase accuracy.
+                   #later, can merely train and predict the specific user on registration
+                   #without redoing PCA
     return "Account {} is now connected! You have added {} points to your Eduvise account!".format(nickname, points)
 
 @bp.route("/update")
