@@ -14,7 +14,7 @@ from random import shuffle, sample
 bp = Blueprint('explore', __name__, url_prefix='/explore')
 CORS(bp)
 
-N_CLUSTERS=3
+N_CLUSTERS=2
 
 with open("Eduvise/badges.json") as f:
     badge_data = json.load(f)["all_badges"]
@@ -58,11 +58,10 @@ def recommend():
     neighbors = list(nearest_users)
     shuffle(neighbors)
     badge_options = set()
-    print(neighbors)
     for neighbor in neighbors:
         badge_options = badge_options.union(set(neighbor.badge_names) - user_badges)
     try:
-        badge_recs = sample(badge_options, 3)
+        badge_recs = sample(badge_options, 2)
         badge_recs_img = {rec:badge_img_map[rec] for rec in badge_recs}
         return json.dumps(badge_recs_img)
     except:
