@@ -1,0 +1,1632 @@
+{
+    "all_badges": [
+        {
+            "badge_name": "gettingstartedmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/just-getting-started-60x60.png"
+        },
+        {
+            "badge_name": "nicetimedproblembadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/picking-up-steam-60x60.png"
+        },
+        {
+            "badge_name": "getforkedoncebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/inspiration-60x60.png"
+        },
+        {
+            "badge_name": "makingprogressmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/making-progress-60x60.png"
+        },
+        {
+            "badge_name": "creatednewscratchpadbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/apprentice-programmer-60x60.png"
+        },
+        {
+            "badge_name": "forkedofficialscratchpadbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/mad-scientist-60x60.png"
+        },
+        {
+            "badge_name": "forkeduserscratchpadbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/collaborator-60x60.png"
+        },
+        {
+            "badge_name": "sharedscratchpadbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/virus-60x60.png"
+        },
+        {
+            "badge_name": "scratchpadtinkererbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/tinkerer-60x60.png"
+        },
+        {
+            "badge_name": "watchedscratchpadplaybackbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/cs-scholar-60x60.png"
+        },
+        {
+            "badge_name": "completechallengebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/tinkerer-60x60.png"
+        },
+        {
+            "badge_name": "firstflagbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/flag-duty-60x60.png"
+        },
+        {
+            "badge_name": "firstupvotebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/thumbs-up-60x60.png"
+        },
+        {
+            "badge_name": "firstdownvotebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/thumbs-down-60x60.png"
+        },
+        {
+            "badge_name": "giveprojectevalbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite-60x60.png"
+        },
+        {
+            "badge_name": "answertimestampreferencebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/researcher-60x60.png"
+        },
+        {
+            "badge_name": "questiontimestampreferencebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/bibliographer-60x60.png"
+        },
+        {
+            "badge_name": "yclaadvocatebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/perseverance-60x60.png"
+        },
+        {
+            "badge_name": "profilecustomizationbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/express-yourself-60x60.png"
+        },
+        {
+            "badge_name": "yearonebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/cypress-60x60.png"
+        },
+        {
+            "badge_name": "fivedayconsecutiveactivitybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/good-habits-60x60.png"
+        },
+        {
+            "badge_name": "tenthousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/ten-to-fourth-60x60.png"
+        },
+        {
+            "badge_name": "fiftythousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/benjamin-franklin-60x60.png"
+        },
+        {
+            "badge_name": "powerfifteenminutesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/inspired-15-minutes-60x60.png"
+        },
+        {
+            "badge_name": "recoverybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/perseverance-60x60.png"
+        },
+        {
+            "badge_name": "nicestreakbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/nice-streak-60x60.png"
+        },
+        {
+            "badge_name": "greatstreakbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/great-streak-60x60.png"
+        },
+        {
+            "badge_name": "awesomestreakbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/awesome-streak-60x60.png"
+        },
+        {
+            "badge_name": "niceplaylisttimebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/great-listener-60x60.png"
+        },
+        {
+            "badge_name": "greatplaylisttimebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/great-listener-60x60.png"
+        },
+        {
+            "badge_name": "actonesceneonebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/act-1-scene-1-60x60.png"
+        },
+        {
+            "badge_name": "firstpracticetaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/makes-perfect-60x60.png"
+        },
+        {
+            "badge_name": "fifthpracticetaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/five-is-alive-60x60.png"
+        },
+        {
+            "badge_name": "tenthpracticetaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/fingers-or-toes-60x60.png"
+        },
+        {
+            "badge_name": "firstmasterytaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/challenge-accepted-60x60.png"
+        },
+        {
+            "badge_name": "fifthmasterytaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/high-five-60x60.png"
+        },
+        {
+            "badge_name": "tenthmasterytaskbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/meteorite/hang-ten-60x60.png"
+        },
+        {
+            "badge_name": "greattimedproblembadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/going-transonic-60x60.png"
+        },
+        {
+            "badge_name": "awesometimedproblembadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/going-supersonic-60x60.png"
+        },
+        {
+            "badge_name": "getforkedtentimesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/good-inspiration-60x60.png"
+        },
+        {
+            "badge_name": "kelvinbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/1000-kelvin-60x60.png"
+        },
+        {
+            "badge_name": "productivemasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/productive-60x60.png"
+        },
+        {
+            "badge_name": "hardatworkmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/hard-at-work-60x60.png"
+        },
+        {
+            "badge_name": "weeklypracticebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/weekly-goal-60x60.png"
+        },
+        {
+            "badge_name": "weeklymasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/weekly-mastery-60x60.png"
+        },
+        {
+            "badge_name": "leveloneanswervotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/good-answer-60x60.png"
+        },
+        {
+            "badge_name": "levelonequestionvotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/good-question-60x60.png"
+        },
+        {
+            "badge_name": "posted5goodanswersbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/excellent-teacher-60x60.png"
+        },
+        {
+            "badge_name": "leveloneprojectevalanswercountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon-60x60.png"
+        },
+        {
+            "badge_name": "yeartwobadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/redwood-60x60.png"
+        },
+        {
+            "badge_name": "acceptclarificationbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/fact-checker-60x60.png"
+        },
+        {
+            "badge_name": "fifteendayconsecutiveactivitybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/like-clockwork-60x60.png"
+        },
+        {
+            "badge_name": "thirtydayconsecutiveactivitybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/atomic-clockwork-60x60.png"
+        },
+        {
+            "badge_name": "hundredthousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/ten-to-fifth-60x60.png"
+        },
+        {
+            "badge_name": "twohundredfiftythousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/frederick-douglass-60x60.png"
+        },
+        {
+            "badge_name": "powerhourbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/power-hour-60x60.png"
+        },
+        {
+            "badge_name": "resurrectionbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/tenacity-60x60.png"
+        },
+        {
+            "badge_name": "ridiculousstreakbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/ridiculous-streak-60x60.png"
+        },
+        {
+            "badge_name": "ludicrousstreakbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/ludicrous-streak-60x60.png"
+        },
+        {
+            "badge_name": "awesomeplaylisttimebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/moon/awesome-listener-60x60.png"
+        },
+        {
+            "badge_name": "ridiculoustimedproblembadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/sublight-speed-60x60.png"
+        },
+        {
+            "badge_name": "getforkedtwentyfivetimesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/great-inspiration-60x60.png"
+        },
+        {
+            "badge_name": "getforkedfiftytimesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/incredible-inspiration-60x60.png"
+        },
+        {
+            "badge_name": "ludicroustimedproblembadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/299-meters-60x60.png"
+        },
+        {
+            "badge_name": "workhorsemasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/work-horse-60x60.png"
+        },
+        {
+            "badge_name": "satcompleted",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sat/sat-real-test-60x60.png"
+        },
+        {
+            "badge_name": "psat10completed",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sat/psat-10-real-test-60x60.png"
+        },
+        {
+            "badge_name": "psat89completed",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sat/psat-8-9-real-test-60x60.png"
+        },
+        {
+            "badge_name": "leveltwoanswervotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/great-answer-60x60.png"
+        },
+        {
+            "badge_name": "levelthreeanswervotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/incredible-answer-60x60.png"
+        },
+        {
+            "badge_name": "leveltwoquestionvotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/great-question-60x60.png"
+        },
+        {
+            "badge_name": "levelthreequestionvotecountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/incredible-question-60x60.png"
+        },
+        {
+            "badge_name": "leveloneanswerqualitycountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/guru-60x60.png"
+        },
+        {
+            "badge_name": "posted25goodanswersbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/incredible-teacher-60x60.png"
+        },
+        {
+            "badge_name": "posted50goodanswersbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/sensei-60x60.png"
+        },
+        {
+            "badge_name": "levelonequestionqualitycountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/investigator-60x60.png"
+        },
+        {
+            "badge_name": "leveltwoprojectevalanswercountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth-60x60.png"
+        },
+        {
+            "badge_name": "patron2020badge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/patron-2020-60x60.png"
+        },
+        {
+            "badge_name": "patron2021badge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/patron-2021-60x60.png"
+        },
+        {
+            "badge_name": "yearthreebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/sequoia-60x60.png"
+        },
+        {
+            "badge_name": "yearfourbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/sequoia-60x60.png"
+        },
+        {
+            "badge_name": "hundreddayconsecutiveactivitybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/10000-year-clock-60x60.png"
+        },
+        {
+            "badge_name": "fivehundredthousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/5x10-60x60.png"
+        },
+        {
+            "badge_name": "sevenhundredfiftythousandairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/helen-keller-60x60.png"
+        },
+        {
+            "badge_name": "doublepowerhourbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/power-hour-60x60.png"
+        },
+        {
+            "badge_name": "ridiculousplaylisttimebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/earth/ridiculous-listener-60x60.png"
+        },
+        {
+            "badge_name": "magellanmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/magellan-60x60.png"
+        },
+        {
+            "badge_name": "sallyridemasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/sally-ride-60x60.png"
+        },
+        {
+            "badge_name": "copernicusmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/copernicus-60x60.png"
+        },
+        {
+            "badge_name": "keplermasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/kepler-60x60.png"
+        },
+        {
+            "badge_name": "hypatiamasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/hypatia-60x60.png"
+        },
+        {
+            "badge_name": "newtonmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/newton-60x60.png"
+        },
+        {
+            "badge_name": "davincimasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/davinci-60x60.png"
+        },
+        {
+            "badge_name": "leveltwoanswerqualitycountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/oracle-60x60.png"
+        },
+        {
+            "badge_name": "leveltwoquestionqualitycountbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/detective-60x60.png"
+        },
+        {
+            "badge_name": "crowdfundingdonationbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/crowdfunding-donation-badge-60x60.png"
+        },
+        {
+            "badge_name": "millionairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/millionaire-60x60.png"
+        },
+        {
+            "badge_name": "twomillionairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/ramanujan-60x60.png"
+        },
+        {
+            "badge_name": "ludicrousplaylisttimebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/sun/ludicrous-listener-60x60.png"
+        },
+        {
+            "badge_name": "atlasmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/eclipse-60x60.png"
+        },
+        {
+            "badge_name": "artemismasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/eclipse-60x60.png"
+        },
+        {
+            "badge_name": "tenmillionairebadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/eclipse-60x60.png"
+        },
+        {
+            "badge_name": "drawinganimationmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/drawing_animation_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "naturalsimulationsmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/natural_simulations_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "htmlcssmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/html_css_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "htmlcssjsmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/html_css_js_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "sqlmasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/sql_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "jquerymasterybadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/jquery_mastery_badge-60x60.png"
+        },
+        {
+            "badge_name": "hourofdrawingbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/hour_of_drawing_badge-60x60.png"
+        },
+        {
+            "badge_name": "hourofdrawing2015badge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/hour_of_drawing_badge-60x60.png"
+        },
+        {
+            "badge_name": "hourofdrawingblocksbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/hour_of_drawing_blocks_badge-60x60.png"
+        },
+        {
+            "badge_name": "hourofdatabasesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/hour_of_databases_badge-60x60.png"
+        },
+        {
+            "badge_name": "hourofwebpagesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/hour_of_webpages_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsdrawingbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/drawing_basics_badge-60x60.png"
+        },
+        {
+            "badge_name": "jscoloringbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/coloring_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsvariablesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/variables_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsanimationbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/animation_basics_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsinteractionbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/interactive_programs_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsresizingvariablesbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/resizing_with_variables_badge-60x60.png"
+        },
+        {
+            "badge_name": "jstextbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/text_basics_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsfunctionsbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/functions_badge-60x60.png"
+        },
+        {
+            "badge_name": "jslogicbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/logic_if_statements_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsloopingbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/looping_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsarraysbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/arrays_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsobjectsbadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/objects_badge-60x60.png"
+        },
+        {
+            "badge_name": "jsoobadge",
+            "badge_url": "https://cdn.kastatic.org/images/badges/cs/object_oriented_badge-60x60.png"
+        },
+        {
+            "badge_name": "topic_exercise_x2915748a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf73303d8_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xaa80d2ac_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8e913210_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x694cb622_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4023aec3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5bbdb185_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe2091c9f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1c9a2e69_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf8c0473b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xaf27f7f4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3411424b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa645a70b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x30dfbb5e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x9ae6719f9187864e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc09fcb17c3dc1166_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x39665ac6c597b247_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xed8af723df4fe064_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfbbc5c38cd9efe45_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x28227514254db9ab_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8f26a99d8c8a8aa7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x639efb3744ddc090_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x16c952affcb38cf5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb5072b81340aa661_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x6048e2a14fd90a0c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x64de5f52c8283150_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x044ec8419fb3e9e3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x09f215195e706ff4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa9433e3b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd12a86e5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4f5577c4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa27745c5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2f3c2573_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1b8f1ef9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xdcdd6a4d_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf79f1c4ccf03859a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4febd3aef31e60fa_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd71e72e103d6d7f3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1ad1d91034b22aa9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe2dd268f0b6da159_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x78a4b34a9c701baa_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3d7033fa7fcee32a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb1989190c0f4fecd_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x07642e154dcbce84_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf1742dd908ad95bb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2e769ecc206ef7d3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc6c4f75ef3941c1e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x64dfa339e6a2a01a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x99ee046cc1e8cac7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xcdf68057_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x71db71a6_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf8624666_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfc4dc15c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe08c6afb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa56687a7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x628adebe7726a7f9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd6b59354eae23131_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb57c1e66dbfcf814_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x089f5910b6891a89_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfdd13d8b6ab193b1_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3352c53c9d44393a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x07c8b6456e9c1c75_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xaa5594d535a0a85b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x74347b2dc32a2bb6_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x135b013a7369cdbe_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfc2fd5ea6fc84684_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x470ebc97c1b5374f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x6fd693407b7c7590_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x72cf2593cc6c03eb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x926167d2b9a10c25_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x494de4cd016e2847_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2c8bd785_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xcc6017fc_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x979ec292_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x80fafbe0_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5aaf9ad1_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf707feda_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf5815416_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x419abcbd_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x98e0520f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfa626edb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/geometry-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x347111cf_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x673b532f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x22eef7de_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8ade30f9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x27543407_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4b63ca24_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1e214063_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe048f240_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x83a102cb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb282e68b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x0a8c9f98_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbee72d33_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc1a4d524_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/geometry-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7ef05b40_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4ddd8846_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x805b3a5e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/rates-and-ratios-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x657459cb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x02b767d2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe0191c84_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x28eabc20_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x58beebf4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfa80bcdc_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x63ea1b64_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc7564d00_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe83906b3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc8775c02c8a5d124_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7306f126_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/geometry-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc44ef069_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1afd9461_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xdffae55c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x71149dce_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x93c46285_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x305b9738_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x25c03557_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbe49b507_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1df8fb3e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x649777e8_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x95928316_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x17e6e850_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5ae1951f49267d10_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x9c23cad6d9661edd_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x99b99cc8049cbb15_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x50868c0eeb0fc226_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x75b0106c03631b81_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x90009cd8ae422e33_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4c62c47c5813dbcb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb1630cb98ec4bae2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc3c3020c46550ed6_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb7469257365b8042_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x74fe17fcb435bd8c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb87efe63dee477ea_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe7dfb15f5edad6c9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa68ae1e712a48d18_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xac480a0beb464c1b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xdaca582eeb00c1eb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x0fc738fa9166acfa_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x0c845901f30a6647_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8b9f8cb2c51b39b3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x73663255d45f4fbe_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbc1ac6a3b5dc07bc_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa050f0299770c96c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x314ac65fc1757b57_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x835a28c20041d5ae_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd967cd7277c855c9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1b0d86655588216f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb0d69a1fe3040ad2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2f2d4cfb7bc655d8_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb80ad6dc16530012_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd8ffd65fe7b9701f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x90c04f514dafe6d8_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf7faa64f661a9e62_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb1aee696f6974830_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5432c6f7037ffefc_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3a79bcb1ef658b56_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb0caa40e7a222a7c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd9df7243d974cab1_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa2935ed2b2239713_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8844b40434e99005_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc78b954939e9c6f7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7007d02797fdc125_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd4d1aded02058874_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5ee2b1ddfb8ed9ef_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3033588f58805372_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa032aed2d0302f6e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8b1c07d3da0175a5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x352f9bcb_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa869475e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4e0ba0da_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x85580c81_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x518bed67_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x67cb5d9c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x073aa5c2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x0b42b472_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5b855a1e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa9c7d564_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x198798e5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbc33bb33_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x96bca81f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3d7703dc19a01c46_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc6d68993f5f78dd7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xab204ad888d46826_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbd6cd865e14ffa74_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5c2512ae3554293f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb7a0d2bb2c9b81f4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd0ae8a03_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2a262576_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4f9f5221_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa2993d94_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x310ffe65_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x54b9a662_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x853bca69_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x314bd06e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xaa176d24_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x735339fa_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1d999dce_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x39dc0a7b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7597fbbe_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4192cc77_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x9e6f6ed7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc244bcf0_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2394bd7b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf1304f59_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8d0deee9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb488d4d2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xdd704d10_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2143fc3d_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x82029b0d22ed4f13_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7a10a34cd2db936c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfe2424d1ddc001f9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd4f79f5f68065103_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x53029aa2ea9ca96a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe14b6218_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa67251d8_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5e661ee5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2548198f0005ec74_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x6bf124c0f261dae3_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xecb244817b2540b4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8c16611a0633fc1d_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2228c6b346ff02df_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8ceb9fb5f9c40aaf_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x144ad327f5e4f4e9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4c7431cdee59fade_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x191e0058bae6ef53_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfad652d5b368c7b6_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xec3d8f107467dc53_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x58dd42e67c7c2248_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x32cb60b2cd0c09d9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x67ef039f85390f69_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe8cf4168a6802ec1_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd066cc4c726e4f14_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3fd5c72337aceff5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb7b79f3599a86d11_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa0cd65ce718d67a9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5e05ab0c221d98de_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xec0df58e93f69ce2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1fc8cbee2c4ef859_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa119235a94fbe169_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb6e5d30597fbb28e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xbc4f062d4b33dcbf_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf7c07f4c4a922649_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa721abf1d8020003_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x8e670fcf8a2e44f5_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc88f7c09d4385a23_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x0545291ac689c644_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf6f25e885978912c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xeb87b0b07d0f1509_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xd4f4fbf0f33dcd24_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xcbd05d4b96727054_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xc32c6dc569907339_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x17862b3a0e1d150e_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x32e4ea656e28b31c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x64bd783b4d7b4aed_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x455a49ec439bd41a_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x7cf4eaa2af89bc4c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x6a5c4c39e6245744_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1dcd590fd00daa99_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x16b067c9_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xcd755b70_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x04908aa2_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2251cb4b_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xa9d6fdff_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1d64bc3f_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xcaacb86d_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x4ba15d90_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x17923675_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1f72b5ec_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x2eac05a991f3daf7_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x73a692e3fa3a7e21_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x1b174b48ff8c5152_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xf3359483e23b2c11_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xe5e4a94e5fae32e4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xfdf2af743c0d3e11_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x5cb908fc82fc0822_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x19857b64d324594c_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x82a94acb1662e168_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_xb1166488_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x36c957e4_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_1cma_FaxmfJzuGtkwR93uwPA-wOqlh4W69Wafn26_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_x3f4bb451_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        },
+        {
+            "badge_name": "topic_exercise_wis13EsT4u0aOUkKUPVvMoUW1ILCoo-U0e3qRWgh_mastery",
+            "badge_url": "https://cdn.kastatic.org/images/power-mode/badges/default-60x60.png?10"
+        }
+    ]
+}
