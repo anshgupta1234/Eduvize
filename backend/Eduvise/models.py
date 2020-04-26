@@ -11,8 +11,10 @@ class User(UserMixin, db.Document):
     khan_token = db.StringField()
     khan_secret = db.StringField()
     points = db.IntField(default=0)
+    points_spent = db.IntField(default=0)
     total_points = db.IntField(default=0)
     badges = db.ListField()
+    user_type = db.IntField()
     
     def set_password(self, password):
         """Create hashed password."""
