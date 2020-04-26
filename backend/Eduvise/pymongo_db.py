@@ -34,3 +34,6 @@ class GetID:
     
     def keyvalue(self, key, value):
         return self.db.find_one({key: value}).get('_id')
+    
+    def leaderboard(self):
+        return self.db.find({}, {'_id': 0, "display_name": 1, "Total Points": 1, "points_spent": 1})
