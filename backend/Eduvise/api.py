@@ -1,13 +1,13 @@
 import json
 from .khan_api import KhanAcademySignIn, KhanAPI
 from flask import (
-    Blueprint, render_template, request, url_for, redirect
+    Blueprint, render_template, request, url_for, redirect, jsonify
 )
 from flask_cors import CORS
 import requests
 from .connected_apis import khanUpdate, duolingoUpdate, nitroUpdate, nitroSearch, caUpdate, caLink
 
-from .pymongo_db import DataBase
+from .pymongo_db import DataBase, GetID
 
 from flask_login import current_user
 
@@ -20,16 +20,18 @@ def oauth_authorize():
     oauth = KhanAcademySignIn()
     request_token, request_token_secret, url = oauth.authorize()
     # add request tokens to db for specific user if cookies dont work for callback properly
-    # DataBase(uid).updateMany({"kart": request_token, "karts": request_token_secret})
-    return redirect(url)
+    DataBase(uid).updateMany({"kart": request_token, "karts": request_token_secret})
+    return jsonify({"url": url})
 
 @bp.route("/oauth_callback")
 def oauth_callback():
-    uid = current_user.id # this is a placeholder, that will be a cookie. 
+    # uid = current_user.id this is a placeholder, that will be a cookie. 
     # if this doesnt work on callback we will nee line 21 uncommented and to add function here to search
     # for user with matching kart and karts
     oauth = KhanAcademySignIn()
     access_token, access_token_secret, request_token, request_token_secret = oauth.callback()
+    pdb = GetID()
+    uid = pdb.keyvalue("kart", request_token)
     DataBase(uid).updateMany({"kaat": access_token, "kaats": access_token_secret})
     # save access_token and access_token_secret to db field with mathing request token and request token secret
     nickname, points = khanUpdate(access_token, access_token_secret)
