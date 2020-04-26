@@ -51,7 +51,8 @@ def update():
         access_token = db.search("kaat")
         access_token_secret = db.search("kaats")
         nickname, kapoints = khanUpdate(access_token, access_token_secret)
-        point_dict["Khan Academy"] = kapoints / 10
+        kapoints = kapoints / 100
+        point_dict["Khan Academy"] = kapoints
     except:
         kapoints = 0
 
@@ -59,14 +60,16 @@ def update():
         username = db.search("dun")
         dpoints, language = duolingoUpdate(username)
         db.updateOne("language", language)
-        point_dict["Duolingo"] = dpoints / 10
+        dpoints = dpoints / 100
+        point_dict["Duolingo"] = dpoints
     except:
         dpoints = 0
     
     try:
         ntid = db.search("ntid")
         ntpoints = nitroUpdate(ntid)
-        point_dict["Nitrotype"] = ntpoints * 10
+        ntpoints = ntpoints * 10
+        point_dict["Nitrotype"] = ntpoints
     except:
         ntpoints = 0
     
@@ -76,8 +79,14 @@ def update():
         point_dict["Codeacademy"] = capoints
     except:
         capoints = 0
-
-    eduvise_points = dpoints + kapoints + ntpoints + capoints
+    
+    try:
+        spent = db.search("points_spent")
+    except:
+        spent = 0
+    
+    point_dict["points_spent"] = spent
+    eduvise_points = dpoints + kapoints + ntpoints + capoints - spent
     point_dict["Total Points"] = eduvise_points
     db.updateMany(point_dict)
 
