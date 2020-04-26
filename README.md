@@ -1,6 +1,8 @@
-# Eduvise
+# Eduvize
 
-Eduvise is an app for iOS and Android designed to incentivize students to continue learning - even when not required by teachers.
+Eduvize is an app for iOS and Android designed to incentivize students to continue learning - even when not required by teachers.
+
+Eduvize works by allowing students to integrate the independent learning app of their choice, like Khan Academy or Duolingo, to their Eduvize account. Eduvize then monitors the student's progress in all of their connected apps and awards them tokens accordingly. These tokens can be used to purchase real gift cards or make in-app purchases. Eduvize also can use the data it collects on each student in order to effectively suggest other content for students to learn or practice based on what other similar users study. This helps keep students interested in learning!
 
 ## Backend Structure
 
@@ -59,4 +61,13 @@ This webhook analyzes as much data it can from your account, including what lang
 ## Frontend Structure
 
 ### Explore Tab:
-The explore tab does things ansh will explain further
+The explore tab helps users find new areas to explore on Khan academy using /explore
+
+### Dashboard Tab:
+Shows a summary of tokens earned and is the portal for connecting new services. Accomplished mainly through /api/ka. Uses Expo's Web Browser to redirect with OAuth
+
+### Leaderboard Tab:
+Shows most amount of tokens earned with react-native-leaderboard. Uses /api/lb to pull this data.
+
+### Store Tab:
+Mainly for style, not actually implemented yet.
