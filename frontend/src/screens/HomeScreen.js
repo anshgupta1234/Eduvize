@@ -32,14 +32,15 @@ export default class HomeScreen extends Component {
     console.log(cookie);
     this.setState({ refreshing: true });
     this.setState({ cookie });
-    fetch(`http://${ip}:5000/api/update`, {
+    fetch(`http://${ip}/api/update`, {
       method: 'GET',
       headers: {
         'Cookie': cookie
       }
     }).then(res => res.json())
-      .then(res => {
+      .then(async(res) => {
         this.setState({ khan: res["Khan Academy"], duo: res["Duolingo"], nitro: res["Nitrotype"], code: res["Codeacademy"], tokens: res["Total Points"], refreshing: false })
+        await AsyncStorage.setItem('tokens', res["Total Points"].toString())
       });
   };
 
@@ -55,7 +56,7 @@ export default class HomeScreen extends Component {
   };
 
   connectKhan = async() => {
-    fetch('http://192.168.10.104:5000/api/ka', {
+    fetch(`http://${ip}/api/ka`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -68,7 +69,7 @@ export default class HomeScreen extends Component {
 
   connectDuo = async() => {
     this.setState({ duoVisible: false });
-    fetch(`http://${ip}:5000/api/duolingo`, {
+    fetch(`http://${ip}/api/duolingo`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -77,7 +78,7 @@ export default class HomeScreen extends Component {
       body: JSON.stringify({
         username: this.state.duoName
       })
-    }).then(WebBrowser.openBrowserAsync(`http://${ip}:5000/api/duolingo`))
+    }).then(WebBrowser.openBrowserAsync(`http://${ip}/api/duolingo`))
   };
 
   getHealthData = () => {
@@ -96,14 +97,14 @@ export default class HomeScreen extends Component {
 
   connectCode = () => {
     this.setState({ codeVisible: false });
-    fetch(`http://${ip}:5000/api/ca?userId=0000&username=` + this.state.codeName, {
+    fetch(`http://${ip}/api/ca?username=` + this.state.codeName, {
       method: 'GET',
       'Cookie': this.state.cookie
     }).then(res => this.setState({ codeVisible: false }))
   };
 
   connectNitro = () => {
-    fetch(`http://${ip}:5000/api/nt?q=${this.state.nitroName}`, {
+    fetch(`http://${ip}/api/nt?q=${this.state.nitroName}`, {
       method: 'GET',
       headers: {
         'Cookie': this.state.cookie
@@ -111,7 +112,7 @@ export default class HomeScreen extends Component {
     }).then(res => res.json()).then(res => {
       if (res.results[0] !== null) {
         const account = res.results[0];
-        fetch(`http://${ip}:5000/api/nt`, {
+        fetch(`http://${ip}/api/nt`, {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',

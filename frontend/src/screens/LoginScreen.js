@@ -13,8 +13,8 @@ const width = Dimensions.get('window').width;
 class LoginTab extends Component {
 
 state = {
-      email: 'yeet@gmail.com',
-      password: 'prince101',
+      email: '',
+      password: '',
       emailErrorMessage: '',
       passwordErrorMessage: '',
   };
@@ -38,7 +38,7 @@ state = {
   };
 
   login(){
-    fetch(`http://${ip}:5000/auth/login/`, {
+    fetch(`http://${ip}/auth/login/`, {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
@@ -169,7 +169,7 @@ class SignupTab extends Component {
   };
 
   sendInfo() {
-    fetch(`http://${ip}:5000/auth/register/`, {
+    fetch(`http://${ip}/auth/register/`, {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
@@ -247,7 +247,6 @@ class SignupTab extends Component {
             leftIcon={{ type: 'material', name: 'person', color: '#999', marginRight: 10 }}
             onChangeText={(text) => this.onChangeText('username', text)}
             placeholder="Display Name"
-            secureTextEntry={true}
             value={this.state.username}
             containerStyle={[styles.input, {marginBottom: 30}]} inputContainerStyle={{ borderBottomWidth: 0 }}
             showBottomBorder={false}
