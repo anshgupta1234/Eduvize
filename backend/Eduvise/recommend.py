@@ -1,3 +1,7 @@
 import numpy as np
-import pandas as pd
-from 
+from sklearn.preprocessing import label_binarize
+from .models import User
+from flask_login import current_user
+
+def get_badges(user):
+    label_binarize(user.badges)
