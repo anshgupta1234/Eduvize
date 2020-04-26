@@ -34,8 +34,6 @@ def duolingoUpdate(username):
     for i in students:
         if i["username"] == username:
             return i["xp"]["points"], i["xp"]["language_name"]
-        else:
-            raise "username not found in student list"
     return 0
 
 def nitroSearch(username):
