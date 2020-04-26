@@ -7,7 +7,7 @@ from flask.json import JSONEncoder
 from bson import json_util
 db = MongoEngine()
 login_manager = LoginManager()
-from . import api, auth, models, webviews
+from . import api, auth, models, webviews, explore
 
 class CustomJSONEncoder(JSONEncoder):
     def default(self, obj): return str(obj)
@@ -44,4 +44,5 @@ def create_app(test_config=None):
     app.register_blueprint(api.bp)
     app.register_blueprint(webviews.bp)
     app.register_blueprint(auth.bp)
+    app.register_blueprint(explore.bp)
     return app

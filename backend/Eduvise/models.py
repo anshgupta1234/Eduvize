@@ -13,7 +13,7 @@ class User(UserMixin, db.Document):
     points = db.IntField(default=0)
     points_spent = db.IntField(default=0)
     total_points = db.IntField(default=0)
-    badges = db.ListField()
+    badge_names = db.ListField()
     user_type = db.IntField()
     
     def set_password(self, password):
