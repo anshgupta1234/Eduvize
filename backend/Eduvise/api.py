@@ -36,7 +36,7 @@ def oauth_callback():
     access_token, access_token_secret, request_token, request_token_secret = oauth.callback(kart, karts)
     db.updateMany({"kaat": access_token, "kaats": access_token_secret})
     # save access_token and access_token_secret to db field with mathing request token and request token secret
-    nickname, points = khanUpdate(access_token, access_token_secret)
+    nickname, points, badgenames = khanUpdate(access_token, access_token_secret)
     return "Account {} is now connected! You have added {} points to your Eduvise account!".format(nickname, points)
 
 @bp.route("/update")
