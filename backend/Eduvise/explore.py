@@ -33,6 +33,10 @@ def train_kmeans():
     for i in range(len(user_stack)):
         user_stack[i].user_type = labels[i]
 
+@bp.route('/train/')
+def train():
+    train_kmeans()
+    return "ok"
 
 @bp.route('/recommend/', methods=["POST"])
 @login_required

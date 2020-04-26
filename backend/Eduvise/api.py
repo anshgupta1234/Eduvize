@@ -11,7 +11,6 @@ from .pymongo_db import DataBase, GetID
 from .explore import train_kmeans
 from flask_login import current_user
 
-
 bp = Blueprint('api', __name__, url_prefix='/api')
 CORS(bp)
 
@@ -36,14 +35,10 @@ def oauth_callback():
     access_token, access_token_secret, request_token, request_token_secret = oauth.callback(kart, karts)
     db.updateMany({"kaat": access_token, "kaats": access_token_secret})
     # save access_token and access_token_secret to db field with mathing request token and request token secret
-<<<<<<< HEAD
     nickname, points = khanUpdate(access_token, access_token_secret)
     train_kmeans() #while amount of data is small, this will increase accuracy.
                    #later, can merely train and predict the specific user on registration
                    #without redoing PCA
-=======
-    nickname, points, badgenames = khanUpdate(access_token, access_token_secret)
->>>>>>> ed9b71c367706b139afce5ce8dd0161d0320ca1c
     return "Account {} is now connected! You have added {} points to your Eduvise account!".format(nickname, points)
 
 @bp.route("/update")
@@ -58,9 +53,8 @@ def update():
     try:
         access_token = db.search("kaat")
         access_token_secret = db.search("kaats")
-        nickname, kapoints, badges = khanUpdate(access_token, access_token_secret)
-        db.updateOne('badge_names', badges)
-        kapoints = int(kapoints / 100)
+        nickname, kapoints = khanUpdate(access_token, access_token_secret)
+        kapoints = kapoints / 100
         point_dict["Khan Academy"] = kapoints
     except:
         kapoints = 0
@@ -69,7 +63,7 @@ def update():
         username = db.search("dun")
         dpoints, language = duolingoUpdate(username)
         db.updateOne("language", language)
-        dpoints = int(dpoints / 10)
+        dpoints = dpoints / 100
         point_dict["Duolingo"] = dpoints
     except:
         dpoints = 0
@@ -77,25 +71,25 @@ def update():
     try:
         ntid = db.search("ntid")
         ntpoints = nitroUpdate(ntid)
-        ntpoints = int(ntpoints * 10)
+        ntpoints = ntpoints * 10
         point_dict["Nitrotype"] = ntpoints
     except:
         ntpoints = 0
     
     try:
         caun = db.search("caun")
-        capoints = int(caUpdate(caun))
+        capoints = caUpdate(caun)
         point_dict["Codeacademy"] = capoints
     except:
         capoints = 0
     
     try:
-        spent = int(db.search("points_spent"))
+        spent = db.search("points_spent")
     except:
         spent = 0
     
     point_dict["points_spent"] = spent
-    eduvise_points = int(dpoints + kapoints + ntpoints + capoints - spent)
+    eduvise_points = dpoints + kapoints + ntpoints + capoints - spent
     point_dict["Total Points"] = eduvise_points
     db.updateMany(point_dict)
 
@@ -131,10 +125,3 @@ def codeacademy():
     else:
         DataBase(uid).updateOne("caun", username)
         return "Thank you. Your account has been linked."
-
-@bp.route('/lb')
-def leaderboard():
-    board = []
-    for user in GetID().leaderboard():
-        board.append(user)
-    return jsonify({"Leaderboard": board})
